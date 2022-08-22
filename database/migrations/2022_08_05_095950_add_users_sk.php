@@ -16,14 +16,13 @@ class AddUsersSk extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->date('tanggal')->nullable()->after('tempat');
             $table->string('telepon')->nullable()->after('tanggal');
-            $table->string('golongan')->nullable()->after('telepon');
             $table->string('pendidikan')->nullable()->after('telepon');
             $table->string('diklat')->nullable()->after('telepon');
             $table->string('jenisjabatan')->nullable()->after('telepon');
             $table->string('nosk')->nullable()->after('telepon');
-            $table->string('nik')->nullable()->after('golongan');
-            $table->string('nokk')->nullable()->after('golongan');
-            $table->string('gender')->nullable()->after('golongan');
+            $table->string('nik')->nullable()->after('telepon');
+            $table->string('nokk')->nullable()->after('telepon');
+            $table->string('gender')->nullable()->after('telepon');
 
     
 

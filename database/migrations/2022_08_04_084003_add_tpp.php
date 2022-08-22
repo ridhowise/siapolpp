@@ -18,6 +18,7 @@ class AddTpp extends Migration
             $kolom->increments('id');
             $kolom->date('awal')->nullable();
             $kolom->date('akhir')->nullable();
+            $kolom->string('status');
             $kolom->timestamps();
         });
 
@@ -32,7 +33,6 @@ class AddTpp extends Migration
 
  		Schema::table('days', function (Blueprint $kolom) {
             $kolom->foreign('month_id')->references('id')->on('month')->onDelete('cascade')->onUpdate('cascade');
-
 
         });
 

@@ -35,7 +35,9 @@ class totalController extends Controller
 	 
     public function index($id)
     {
-        $data=total::where('month_id',$id)->where('disiplin','!=','null')->where('produktifitas','<', 100 )->orderBy('id', 'ASC')->get();
+        $data=total::where('month_id',$id)->orderBy('id', 'ASC')->get();
+
+        // $data=total::where('month_id',$id)->where('disiplin','!=','null')->where('produktifitas','<', 100 )->orderBy('id', 'ASC')->get();
         // dd($data);
         // $total=total::where('keluar_id',$id)->get();
         // $barangs=persediaan::all();

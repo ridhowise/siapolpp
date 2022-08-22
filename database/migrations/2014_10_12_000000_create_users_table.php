@@ -19,10 +19,16 @@ class CreateUsersTable extends Migration
 			$kolom->timestamps();
         });
 
+        Schema::create('golongan', function (Blueprint $kolom) {
+            $kolom->increments('id');
+            $kolom->string('name');  
+			$kolom->timestamps();
+        });
 
         Schema::create('users', function (Blueprint $kolom) {
             $kolom->increments('id');
             $kolom->unsignedInteger('level_id')->nullable();
+            $kolom->unsignedInteger('golongan_id')->nullable();
             $kolom->string('salary')->nullable();
             $kolom->string('name');
             $kolom->string('unit')->nullable();
@@ -36,6 +42,7 @@ class CreateUsersTable extends Migration
       
         Schema::table('users', function (Blueprint $kolom) {
 		  $kolom->foreign('level_id')->references('id')->on('levels')->onDelete('cascade')->onUpdate('cascade');
+		  $kolom->foreign('golongan_id')->references('id')->on('golongan')->onDelete('cascade')->onUpdate('cascade');
 
         });
 
