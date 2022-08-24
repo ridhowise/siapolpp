@@ -36,8 +36,8 @@
                                     <th>Daftar Hari Kerja</th>
                                     <th>Kedisiplinan</th>
                                     <th>Produktifitas</th>
-                                    <th>Status</th>
                                     <th>Total</th>
+                                    <th>Status</th>
                                     <th>Action</th>
 
                                 </tr>
@@ -47,7 +47,8 @@
 
                                 @foreach ($data as $key => $items)
                                     <td>{{ $items->awal }} - {{$items->akhir}} </td>
-                                   
+                                    <td><a class="btn btn-sm btn-success" type="submit"
+                                        href="total/{{ $items->id }}"><i class="fas fa-arrow-right"></i> Total</a> </td>
                                     <td><a class="btn btn-sm btn-info" type="submit"
                                         href="days/{{ $items->id }}"><i class="fas fa-eye"></i> Lihat Detail</a></td>
                                     <td><a class="btn btn-sm btn-primary" type="submit"
@@ -87,8 +88,7 @@
 
                                    
                                     @endif
-                                                                               <td><a class="btn btn-sm btn-success" type="submit"
-                                                href="total/{{ $items->id }}"><i class="fas fa-arrow-right"></i> Total</a> </td>
+                                                                               
                                             <td>
 
                                                 
