@@ -20,6 +20,7 @@
         <thead>
           <tr>
             <th>No</th>
+            <th>Foto</th>
             <th>NIP</th>
             <th>Nama</th>
             <th>Tempat</th>
@@ -44,6 +45,8 @@
             @foreach($data as $items)
             <tr>
                 <td>{{ $no++ }}</td>
+                <td>          <img class="img-profile rounded-circle"  style="width:50px" src="{{ URL::asset('images/') }}/{{Auth::User()->images}}">
+                </td>
                 <td>{{ $items->nip }}</td>
                 <td>{{ $items->name }}</td>
                 <td>{{ $items->tempat }}</td>
