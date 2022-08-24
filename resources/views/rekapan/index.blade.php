@@ -47,8 +47,7 @@
 
                                 @foreach ($data as $key => $items)
                                     <td>{{ $items->awal }} - {{$items->akhir}} </td>
-                                    <td><a class="btn btn-sm btn-success" type="submit"
-                                        href="total/{{ $items->id }}"><i class="fas fa-arrow-right"></i> Total</a> </td>
+                                   
                                     <td><a class="btn btn-sm btn-info" type="submit"
                                         href="days/{{ $items->id }}"><i class="fas fa-eye"></i> Lihat Detail</a></td>
                                     <td><a class="btn btn-sm btn-primary" type="submit"
@@ -56,6 +55,8 @@
                                         <td><a class="btn btn-sm btn-primary" type="submit"
                                             href="produktifitas/{{ $items->id }}"><i class="fas fa-arrow-right"></i> Input Produktifitas</a></td>
                                         </td>
+                                        <td><a class="btn btn-sm btn-success" type="submit"
+                                            href="total/{{ $items->id }}"><i class="fas fa-arrow-right"></i> Total</a> </td>
                                         @if($items->status == 0 and Auth::User()->level_id == '2' )
                                         <td><a class="btn btn-sm btn-secondary" type="submit"
                                             href="total/{{ $items->id }}"><i class="fas fa-spinner fa-spin"></i> Input belum selesai</a></td> 
