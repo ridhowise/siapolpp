@@ -119,27 +119,27 @@
 
 
                                                 <div class="col-lg-9">
-                                                <select name="golongan" id="golongan" onchange="yesnoCheck(this);" class="form-control{{ $errors->has('golongan') ? ' is-invalid' : '' }}">
+                                                <select name="golongan_id" id="golongan" onchange="yesnoCheck(this);" class="form-control{{ $errors->has('golongan') ? ' is-invalid' : '' }}">
                 
-                                                    <option value="{{$data->golongan}}">{{$data->golongan}}</option>
+                                                    <option value="{{$data->golongan->id}}">{{$data->golongan->name}}</option>
                                                     <option value="">----</option>
-                                                    <option value="Juru Muda, I/a"> Juru Muda, I/a</option>
-                                                        <option value="Juru Muda Tingkat I, I/b"> Juru Muda Tingkat I, I/b</option>
-                                                        <option value="Juru, I/c"> Juru, I/c</option>
-                                                        <option value="Juru Tingkat I, I/d"> Juru Tingkat I, I/d</option>
-                                                        <option value="Pengatur Muda, II/a"> Pengatur Muda , II/a</option>
-                                                        <option value="Pengatur Muda Tingkat I, II/b"> Pengatur Muda Tingkat I , II/b</option>
-                                                        <option value="Pengatur, II/c"> Pengatur, II/c</option>
-                                                        <option value="Pengatur Tingkat I , II/d"> Pengatur Tingkat I , II/d</option>
-                                                        <option value="Penata Muda, III/a"> Penata Muda , III/a</option>
-                                                        <option value="Penata Muda Tingkat I, III/b"> Penata Muda Tingkat I , III/b</option>
-                                                        <option value="Penata, III/c"> Penata , III/c</option>
-                                                        <option value="Penata Tingkat I , III/d"> Penata Tingkat I , III/d</option>
-                                                        <option value="Pembina, IV/a"> Pembina, IV/a</option>
-                                                        <option value="Pembina Tingkat I, IV/b"> Pembina Tingkat I, IV/b</option>
-                                                        <option value="Pembina Utama Muda, IV/c"> Pembina Utama Muda, IV/c</option>
-                                                        <option value="Pembina Utama Madya, IV/d"> Pembina Utama Madya, IV/d</option>
-                                                        <option value="Pembina Utama, IV/e"> Pembina Utama, IV/e</option>
+                                                    <option value="1"> Juru Muda, I/a</option>
+                                                    <option value="2"> Juru Muda Tingkat I, I/b</option>
+                                                    <option value="3"> Juru, I/c</option>
+                                                    <option value="4"> Juru Tingkat I, I/d</option>
+                                                    <option value="5"> Pengatur Muda , II/a</option>
+                                                    <option value="6"> Pengatur Muda Tingkat I , II/b</option>
+                                                    <option value="7"> Pengatur, II/c</option>
+                                                    <option value="8"> Pengatur Tingkat I , II/d</option>
+                                                    <option value="9"> Penata Muda , III/a</option>
+                                                    <option value="10"> Penata Muda Tingkat I , III/b</option>
+                                                    <option value="11"> Penata , III/c</option>
+                                                    <option value="12"> Penata Tingkat I , III/d</option>
+                                                    <option value="13"> Pembina, IV/a</option>
+                                                    <option value="14"> Pembina Tingkat I, IV/b</option>
+                                                    <option value="15"> Pembina Utama Muda, IV/c</option>
+                                                    <option value="16"> Pembina Utama Madya, IV/d</option>
+                                                    <option value="17"> Pembina Utama, IV/e</option>
                                                     
 
                 

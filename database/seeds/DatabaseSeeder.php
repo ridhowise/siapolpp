@@ -198,7 +198,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'steven',
             'images' => 'admin.png',
             'salary' => '20000000',
-            'password' => bcrypt('siapolpp2022'),
+            'password' => bcrypt('Siapolpp@2022'),
             'created_at' => Carbon::now(),
         ]);
         DB::table('users')->insert([
@@ -208,7 +208,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'xaverius',
             'images' => 'admin.png',
             'salary' => '7000000',
-            'password' => bcrypt('siapolpp2022'),
+            'password' => bcrypt('Siapolpp@2022'),
             'created_at' => Carbon::now(),
         ]);
         DB::table('users')->insert([
@@ -350,7 +350,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'denny',
             'images' => 'admin.png',
             'salary' => '4500000',
-            'password' => bcrypt('siapolpp2022'),
+            'password' => bcrypt('Siapolpp@2022'),
             'created_at' => Carbon::now(),
         ]);
         DB::table('users')->insert([
@@ -570,7 +570,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'tifani',
             'images' => 'admin.png',
             'salary' => '1750000',
-            'password' => bcrypt('siapolpp2022'),
+            'password' => bcrypt('Siapolpp@2022'),
             'created_at' => Carbon::now(),
         ]);
         DB::table('users')->insert([

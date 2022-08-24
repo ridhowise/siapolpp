@@ -10,9 +10,8 @@ class golongan extends Model
     protected $table = 'golongan';
     public $timestamps = true;
     
-    public function user()
-    {
-      return $this->belongsTo('App\Models\User', 'user_id');
+    public function user(){
+    	return $this->hasMany(User::class);
     }
    
 }
