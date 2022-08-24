@@ -108,6 +108,7 @@ Route::post('/kedisiplinan/{id}', 'kedisiplinanController@store')->name('store')
 Route::get('/total/create-pdf/{id}', 'totalController@exportPDF')->name('exportPDF')->middleware('auth');
 Route::get('/kedisiplinan/create-pdf/{id}', 'kedisiplinanController@exportPDF')->name('exportPDF')->middleware('auth');
 
+Route::get('/maintenance', 'maintenanceController@index')->name('maintenance')->middleware('auth');
 
 Route::get('password/change', 'Auth\AuthController@changePassword');
 Route::post('password/change', 'Auth\AuthController@postChangePassword');

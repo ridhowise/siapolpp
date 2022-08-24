@@ -36,7 +36,7 @@
   
     <div id="collapse4" class="collapse " aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="py-2 collapse-inner rounded" style="">
-            <a class="collapse-item " style="color:white" href="{{ url('tahun') }}">
+            <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
                DUK
             </a>
             <hr class="sidebar-divider">
@@ -45,12 +45,12 @@
                 Nominatif PNS
             </a>
   
-            <a class="collapse-item " style="color:white" href="{{ url('kibc') }}">
+            <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
                 Nominatif NON-PNS
             </a>
             <hr class="sidebar-divider">
 
-            <a class="collapse-item " style="color:white" href="{{ url('kibd') }}">
+            <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
                 SKUM
             </a>
             <hr class="sidebar-divider">
@@ -73,7 +73,7 @@
   <div id="collapse1" class="collapse " aria-labelledby="headingTwo" data-parent="#accordionSidebar">
       <div class="py-2 collapse-inner rounded" style="">
 
-        <a class="collapse-item " style="color:white" href="{{ url('') }}">
+        <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
             Laporan Keuangan
          </a>
          <br>
@@ -126,25 +126,25 @@
   
     <div id="collapse2" class="collapse " aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="py-2 collapse-inner rounded" style="">
-            <a class="collapse-item " style="color:white" href="{{ url('tahun') }}">
+            <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
                Renstra
             </a>
   
-            <a class="collapse-item " style="color:white" href="{{ url('kibb') }}">
+            <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
                 Renja
             </a>
   
-            <a class="collapse-item " style="color:white" href="{{ url('kibc') }}">
+            <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
                 LAKIP
             </a>
   
-            <a class="collapse-item " style="color:white" href="{{ url('kibd') }}">
+            <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
                 SPM
             </a>
-            <a class="collapse-item " style="color:white" href="{{ url('kibd') }}">
+            <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
                 Perjanjian Kinerja
             </a>
-            <a class="collapse-item " style="color:white" href="{{ url('kibd') }}">
+            <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
                 Evaluasi Perjanjian Kinerja
             </a>
   
