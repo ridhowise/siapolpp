@@ -45,7 +45,7 @@
             @foreach($data as $items)
             <tr>
                 <td>{{ $no++ }}</td>
-                <td>          <img class="img-profile rounded-circle"  style="width:50px" src="{{ URL::asset('images/') }}/{{Auth::User()->images}}">
+                <td>          <img class="img-profile rounded-circle"  style="width:50px" src="{{ URL::asset('images/') }}/{{$items->images}}">
                 </td>
                 <td>{{ $items->nip }}</td>
                 <td>{{ $items->name }}</td>
