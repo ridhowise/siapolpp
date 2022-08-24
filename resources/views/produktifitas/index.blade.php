@@ -216,34 +216,19 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                               </div>
                             </div>
 
-                            <div class="form-group row">
-
-                               
-
-                                    <label class="col-lg-3 form-control-label">Kinerja </label>
-
-                                <div class="col-lg-6">
-                                    <table class="col-lg-12" id="dynamic_field">
-                                        <tr>
-
+                            
                                            
-                                            <td> <textarea value="" name="kinerja[]" type="text"  class="form-control"></textarea> </td>
+                                            <input value="1" name="kinerja[]" type="hidden"  class="form-control"></input>
 
                         
-                                            <td><button type="button" name="add" id="add"
-                                                    class="btn btn-success">+</button></td>
-
-                                                    
-                                        </tr>
-                                          <tr><td><input type="text" value="" class="form-control" name="kuantitast[]" placeholder="Kuantitas Target"></td></tr>
-                                          <tr><td><input type="text" value="" class="form-control" name="kuantitasr[]" placeholder="Kuantitas Realisasi"></td></tr>
-                                          <tr><td><input type="text" value="" class="form-control" name="outputt[]" placeholder="Output"></td></tr>
-                                    </table>
+                                         
+                                          <input type="hidden" value="1" class="form-control" name="kuantitast[]" placeholder="Kuantitas Target">
+                                          <input type="hidden" value="1" class="form-control" name="kuantitasr[]" placeholder="Kuantitas Realisasi">
+                                          <input type="hidden"" value="1" class="form-control" name="outputt[]" placeholder="Output">
+                                   
 
 
-                                </div>
-
-                            </div>
+                                
 
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary"
