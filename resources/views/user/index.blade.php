@@ -51,7 +51,7 @@
                 <td>{{ $items->gender }}</td>
                 <td>{{ $items->alamat }}</td>
                 <td>{{ $items->telepon }}</td>
-                <td>{{ $items->golongan->name }}</td>
+                <td>{{ $items->golongan }}</td>
                 <td>{{ $items->pendidikan }}</td>
                 <td>{{ $items->diklat }}</td>
                 <td>{{ $items->jenisjabatan }}</td>
