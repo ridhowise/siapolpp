@@ -56,27 +56,27 @@
                                         @if($items->status == 0 and Auth::User()->level_id == '21' )
                                         <td><a class="btn btn-sm btn-warning" type="submit"
                                             href="barangkeluar/{{ $items->id }}"><i class="fas fa-spinner fa-spin"></i> Approvement</a></td>
-                                        <td>
+                                        
                                         @elseif($items->status == 0 and Auth::User()->level_id != '21' )
                                         <td><a class="btn btn-sm btn-secondary" type="submit"
                                             href="#"><i class="fas fa-spinner fa-spin"></i> Menunggu Konfirmasi</a></td>
-                                        <td>
+                                       
                                         @elseif($items->status == 1 and Auth::User()->level_id == '21' )
                                             <td><a class="btn btn-sm btn-info" type="submit"
                                         href="barangkeluar/{{ $items->id }}"><i class="fas fa-eye"></i> Lihat Detail</a></td>
-                                    <td>
+                                    
                                         @elseif($items->status == 1 and Auth::User()->level_id != '21' )
                                             <td><a class="btn btn-sm btn-info" type="submit"
                                         href="barangkeluar/{{ $items->id }}"><i class="fas fa-eye"></i> Lihat Detail</a></td>
-                                    <td>
+                                   
                                         @elseif($items->status == 2 and Auth::User()->level_id == '21' )
                                         <td><a class="btn btn-sm btn-danger" type="submit"
                                     href="#"> Ditolak</a></td>
-                                <td>
+                                
                                     @elseif($items->status == 2 and Auth::User()->level_id != '21' )
                                         <td><a class="btn btn-sm btn-danger" type="submit"
                                     href="#"> Ditolak</a></td>
-                                <td>
+                               
                                         @endif
                                         <form action="{{ route('keluar.destroy', $items->id) }}" method="post">
                                             {{ csrf_field() }}

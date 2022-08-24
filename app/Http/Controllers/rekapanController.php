@@ -66,6 +66,8 @@ class rekapanController extends Controller
         $data = new month;
         $data->awal = $request->input('awal');
         $data->akhir = $request->input('akhir');
+        $data->status = 0;
+
 
         $data -> save();
 

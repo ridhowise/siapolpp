@@ -36,6 +36,7 @@ class totalController extends Controller
     public function index($id)
     {
         $data=total::where('month_id',$id)->orderBy('id', 'ASC')->get();
+        $status=month::findOrFail($id);
 
         // $data=total::where('month_id',$id)->where('disiplin','!=','null')->where('produktifitas','<', 100 )->orderBy('id', 'ASC')->get();
         // dd($data);
@@ -54,7 +55,7 @@ class totalController extends Controller
 
 
         
-        return view('total.index',compact('data'));
+        return view('total.index',compact('data','status'));
     }
 
     /**
@@ -67,6 +68,8 @@ class totalController extends Controller
         $data=keluar::findOrFail($id);
         $total=total::where('keluar_id',$id)->get();
         $barangs=persediaan::all();
+
+        
         return view('total.index',compact('data','total','barangs'));
 		
     }
@@ -79,41 +82,20 @@ class totalController extends Controller
      */
     public function store(Request $request, $id)
     {
-        $data=keluar::findOrFail($id);
-        $data->status = $request->input('status');
-        $data->save();
-
-        $barangs = $request->input('id');
-        $jumlahs = $request->input('jumlah');
-
-        
-
-        foreach($barangs as $key => $barang_id) {
-
-           
-            $datas = persediaan::find($barang_id);
-            $ada = $datas->jumlah;
-            $datas->jumlah = $ada-$jumlahs[$key];
-            $datas->save();
-
-            $datazz= total::where('keluar_id',$id)->get();
-
-            foreach($datazz as $dataw){
-            $dataw->status = $request->input('status');
-            $dataw->save();
-
-        }
+       
     
          
 
-        }
+        $data=month::findOrFail($id);
+        $data->status = $request->input('status');
+        $data->save();
 
         
 
             
         
 
-		return redirect()->route('keluar.index')->with('alert-success', 'Berhasil Menambahkan Data!');
+		return redirect()->route('rekapan.index')->with('alert-success', 'Berhasil Menambahkan Data!');
 
         //request()->pic->move(public_path('assets/images'), $imageName);
         //return redirect('pertemuan');

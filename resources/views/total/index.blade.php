@@ -28,6 +28,20 @@
                         </div>
                     @endif
 
+                    @if($status->status == 0)
+                    <div class="centerx">
+                     <a style="color:white" href="" class="btn btn-lg btn-success"  data-toggle="modal" data-target="#add">SELESAI</a>
+               
+                     </div>
+                   @elseif($status->status == 1 and Auth::User()->level_id == '27' or Auth::User()->level_id == '1' or Auth::User()->level_id == '13')
+                   <div class="centerx">
+                    <a style="color:white" href="" class="btn btn-lg btn-success"  data-toggle="modal" data-target="#addlate">APPROVE</a>
+              
+                    </div>
+                    @else
+                   @endif 
+
+
                     <div class="table-responsive">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 
@@ -87,6 +101,7 @@
                                 @endforeach
                             </tbody>
                         </table>
+
                     </div>
               
             </div>
@@ -141,6 +156,78 @@
                 </div>
             </div>
         </div>
+        
+
+<div class="modal fade bd-example-modal-lg" id="add" tabindex="-1" role="dialog"
+aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content" style="border:1px solid black;">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">APPROVEMENT</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <form id="upload-image-form" class="form-horizontal" action=""" method="post"
+            enctype="multipart/form-data">
+            {{ csrf_field() }}
+            <div class="modal-body">
+              
+            </div>
+            <input type="hidden" name="status" value="1" class="form-control"> 
+
+          
+                                         
+
+                                            
+                                        
+                           
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary"
+                                    data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-default"
+                                    style="border:1px solid black;">Save changes</button>
+                            </div>
+        </form>
+    </div>
+</div>
+</div>
+    
+
+<div class="modal fade bd-example-modal-lg" id="addlate" tabindex="-1" role="dialog"
+aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content" style="border:1px solid black;">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">APPROVEMENT</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <form id="upload-image-form" class="form-horizontal" action=""" method="post"
+            enctype="multipart/form-data">
+            {{ csrf_field() }}
+            <div class="modal-body">
+              
+            </div>
+            <input type="hidden" name="status" value="2" class="form-control"> 
+
+          
+                                         
+
+                                            
+                                        
+                           
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary"
+                                    data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-default"
+                                    style="border:1px solid black;">Save changes</button>
+                            </div>
+        </form>
+    </div>
+</div>
+</div>
         <!-- Add -->
         <div class="modal fade bd-example-modal-lg" id="adds" tabindex="-1" role="dialog"
             aria-labelledby="exampleModalLabel" aria-hidden="true">

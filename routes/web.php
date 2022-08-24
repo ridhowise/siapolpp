@@ -85,6 +85,8 @@ Route::get('/kibbdetail/{id}', 'kibbdetailController@index')->name('kibbdetail')
 
 // Route::resource('rekap', 'rekapController')->middleware('auth');
 Route::get('/total/{id}', 'totalController@index')->name('total')->middleware('auth');
+Route::post('/total/{id}', 'totalController@store')->name('store')->middleware('auth');
+
 
 Route::resource('daftarkinerja', 'daftarkinerjaController')->middleware('auth');
 Route::get('/produktifitas/{id}', 'produktifitasController@index')->name('produktifitas')->middleware('auth');
