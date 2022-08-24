@@ -157,16 +157,16 @@
                                             
                                                     <option value="{{$data->pendidikan}}">{{$data->pendidikan}}</option>
                                                     <option value="">----</option>
-                                                    <option value="1" >SARJANA  (S1)</option>
-                                                    <option value="2" >PASCA SARJANA (S2)</option>
-                                                    <option value="3" >DOKTOR (S3)</option>
-                                                    <option value="4" >DIPLOMA IV</option>
-                                                    <option value="5" >DIPLOMA III</option>
-                                                    <option value="6" >DIPLOMA II</option>
-                                                    <option value="7" >DIPLOMA I</option>
-                                                    <option value="8" >SMA / Sederajat</option>
-                                                    <option value="9" >SMP / Sederajat</option>
-                                                    <option value="10" >SD / Sederajat</option>
+                                                    <option value="SARJANA  (S1)" >SARJANA  (S1)</option>
+                                                    <option value="PASCA SARJANA (S2)" >PASCA SARJANA (S2)</option>
+                                                    <option value="DOKTOR (S3)" >DOKTOR (S3)</option>
+                                                    <option value="DIPLOMA IV" >DIPLOMA IV</option>
+                                                    <option value="DIPLOMA III" >DIPLOMA III</option>
+                                                    <option value="DIPLOMA II" >DIPLOMA II</option>
+                                                    <option value="DIPLOMA I<" >DIPLOMA I</option>
+                                                    <option value="SMA / Sederajat" >SMA / Sederajat</option>
+                                                    <option value="SMP / Sederajat" >SMP / Sederajat</option>
+                                                    <option value="SD / Sederajat" >SD / Sederajat</option>
                                                     
                                             
                                             
@@ -183,13 +183,13 @@
                                                 <select name="diklat" id="diklat" onchange="yesnoCheck(this);" class="form-control{{ $errors->has('diklat') ? ' is-invalid' : '' }}">
                                             
                                                     <option value="{{$data->diklat}}">{{$data->diklat}}</option>
-                                                    <option value="">----</option>
-                                                    <option value="1" >DIKLAT STRUKTURAL</option>
-                                                    <option value="2" >DIKLAT FUNGSIONAL POL PP</option>
-                                                    <option value="3" >DIKLAT PPNS</option>
-                                                    <option value="4" >DIKLAT TEKNIS</option>
-                                                    <option value="5" >DIKLAT DASAR POL.PP</option>
-                                                    <option value="6" >DIKLAT LAINNYA</option>
+                                                    <option value="-">----</option>
+                                                    <option value="DIKLAT STRUKTURAL" >DIKLAT STRUKTURAL</option>
+                                                    <option value="DIKLAT FUNGSIONAL POL PP" >DIKLAT FUNGSIONAL POL PP</option>
+                                                    <option value="DIKLAT PPNS" >DIKLAT PPNS</option>
+                                                    <option value="DIKLAT TEKNIS" >DIKLAT TEKNIS</option>
+                                                    <option value="DIKLAT DASAR POL.PP" >DIKLAT DASAR POL.PP</option>
+                                                    <option value="DIKLAT LAINNYA" >DIKLAT LAINNYA</option>
                                                     
                                             
                                             
@@ -207,10 +207,10 @@
                                                 <select name="jenisjabatan" id="jenisjabatan" onchange="yesnoCheck(this);" class="form-control{{ $errors->has('jenisjabatan') ? ' is-invalid' : '' }}">
                                             
                                                     <option value="{{$data->jenisjabatan}}">{{$data->jenisjabatan}}</option>
-                                                    <option value="">----</option>
-                                                    <option value="1" >JFT</option>
-                                                    <option value="2" >JFU</option>
-                                                    <option value="3" >Struktural</option>
+                                                    <option value="-">----</option>
+                                                    <option value="JFT" >JFT</option>
+                                                    <option value="JFU" >JFU</option>
+                                                    <option value="Struktural" >Struktural</option>
                                                     
                                             
                                             
