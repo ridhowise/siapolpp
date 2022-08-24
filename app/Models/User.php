@@ -43,8 +43,8 @@ class User extends Authenticatable
     public function class(){
         return $this->belongsTo(kelas::class,'class_id');
     }
-    public function nilai(){
-    	return $this->hasMany(nilai::class,'quiz_id');
+    public function golongan(){
+    	return $this->hasMany(golongan::class,'golongan_id');
     }
     /**
      * The attributes that should be cast to native types.
