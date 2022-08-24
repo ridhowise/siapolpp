@@ -6,7 +6,7 @@
   {{-- <div class="sidebar-brand-icon rotate-n-15">
     <i class="fas fa-edit"></i>
   </div> --}}
-  <div class="sidebar-brand-text mx-3" style="">SIAPOLPP <br><h6 style="font-size:8px">Sistem Administrasi Satpol PP</h6><sup></sup></div>
+  <div class="sidebar-brand-text mx-3" style=""> <img style="width:205px" src="{{ URL::asset('images/') }}/putih.png"></img></div>
   
 </a>
 
