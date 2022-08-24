@@ -55,27 +55,34 @@
                                         <td><a class="btn btn-sm btn-primary" type="submit"
                                             href="produktifitas/{{ $items->id }}"><i class="fas fa-arrow-right"></i> Input Produktifitas</a></td>
                                         </td>
-                                        @if($items->status == 0 and Auth::User()->level_id == '27' or Auth::User()->level_id == '1' or Auth::User()->level_id == '13' )
-                                        <td><a class="btn btn-sm btn-warning" type="submit"
-                                            href="total/{{ $items->id }}"><i class="fas fa-spinner fa-spin"></i> Belum Input</a></td> 
-                                       
-                                        @elseif($items->status == 0 and Auth::User()->level_id != '27' )
-                                        <td><a class="btn btn-sm btn-warning" type="submit"
-                                            href="total/{{ $items->id }}"><i class="fas fa-spinner fa-spin"></i> Belum Input</a></td> 
-                                       
-                                        @elseif($items->status == 1 and Auth::User()->level_id == '27' or Auth::User()->level_id == '1' or Auth::User()->level_id == '13'  )
-                                        <td><a class="btn btn-sm btn-warning" type="submit"
-                                            href="total/{{ $items->id }}"><i class="fas fa-spinner fa-spin"></i> Approvement</a></td>   
-                                        @elseif($items->status == 1 and Auth::User()->level_id != '27' )
+                                        @if($items->status == 0 and Auth::User()->level_id == '2' )
                                         <td><a class="btn btn-sm btn-secondary" type="submit"
-                                            href="#"><i class="fas fa-spinner fa-spin"></i> Menunggu Konfirmasi</a></td>
+                                            href="total/{{ $items->id }}"><i class="fas fa-spinner fa-spin"></i> Input belum selesai</a></td> 
+                                       
+                                        @elseif($items->status == 0 and Auth::User()->level_id != '2' )
+                                        <td><a class="btn btn-sm btn-secondary" type="submit"
+                                            href="total/{{ $items->id }}"><i class="fas fa-spinner fa-spin"></i> Input belum selesai</a></td> 
+                                       
+                                        @elseif($items->status == 1 and Auth::User()->level_id == '2'  )
+                                        <td><a class="btn btn-sm btn-warning" type="submit"
+                                            href="total/{{ $items->id }}"><i class="fas fa-spinner fa-spin"></i>Checker</a></td>   
+                                        @elseif($items->status == 1 and Auth::User()->level_id != '2' )
+                                        <td><a class="btn btn-sm btn-secondary" type="submit"
+                                            href="#"><i class="fas fa-spinner fa-spin"></i> Proses Checker</a></td>
+
+                                            @elseif($items->status == 2 and Auth::User()->level_id == '1'   )
+                                            <td><a class="btn btn-sm btn-warning" type="submit"
+                                                href="total/{{ $items->id }}"><i class="fas fa-spinner fa-spin"></i>Approvement</a></td>   
+                                            @elseif($items->status == 2 and Auth::User()->level_id != '1' )
+                                            <td><a class="btn btn-sm btn-secondary" type="submit"
+                                                href="#"><i class="fas fa-spinner fa-spin"></i> Proses Approvement</a></td>
 
                                     
-                                    @elseif($items->status == 2 and Auth::User()->level_id == '27' or Auth::User()->level_id == '1' or Auth::User()->level_id == '13' )
+                                    @elseif($items->status == 3 and Auth::User()->level_id == '1' )
                                     <td><a class="btn btn-warning" href="/total/create-pdf/{{$items->id}}">Download<i class="fas fa-arrow-down"></i></a></td>
 
                                     
-                                        @elseif($items->status == 2 and Auth::User()->level_id != '27' )
+                                        @elseif($items->status == 3 and Auth::User()->level_id != '1' )
                                         <td><a class="btn btn-warning" href="/total/create-pdf/{{$items->id}}">Download<i class="fas fa-arrow-down"></i></a></td>
 
                                    

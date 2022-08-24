@@ -9,9 +9,23 @@
 
         <!-- Page Heading -->
 
-            <h1 class="h3 mb-2 text-gray-800">Total 
-
-            </h1>
+           
+                @if($status->status == 0)
+                <h1 class="h3 mb-2 text-gray-800">Total <a href="" class="btn btn-sm btn-primary"
+                    data-toggle="modal" data-target="#add">Selesai </a>
+                </h1>
+               @elseif($status->status == 1 and Auth::User()->level_id == '2')
+               <h1 class="h3 mb-2 text-gray-800">Total <a href="" class="btn btn-sm btn-primary"
+                data-toggle="modal" data-target="#addlates">Check </a>
+                </h1>
+                @elseif($status->status == 2 and Auth::User()->level_id == '1' )
+                <h1 class="h3 mb-2 text-gray-800">Total <a href="" class="btn btn-sm btn-primary"
+                    data-toggle="modal" data-target="#addlate">Approve </a>
+                </h1>
+                @else
+                
+               @endif 
+            </h1> 
        
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
@@ -91,26 +105,7 @@
                         </table>
 
                     </div>
-                    <hr>
-                    <br>
-                    @if($status->status == 0)
-                    <div style=" display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 50px;">
-                     <a style="color:white" href="" class="btn btn-lg btn-danger"  data-toggle="modal" data-target="#add">SELESAI</a>
-               
-                     </div>
-                   @elseif($status->status == 1 and Auth::User()->level_id == '27' or Auth::User()->level_id == '1' or Auth::User()->level_id == '13')
-                   <div style=" display: flex;
-                   justify-content: center;
-                   align-items: center;
-                   height: 50px;">
-                    <a style="color:white" href="" class="btn btn-lg btn-danger"  data-toggle="modal" data-target="#addlate">APPROVE</a>
-              
-                    </div>
-                    @else
-                   @endif 
+                    
 
             </div>
         </div>
@@ -213,6 +208,51 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
     
 
 <div class="modal fade bd-example-modal-lg" id="addlate" tabindex="-1" role="dialog"
+aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content" style="border:1px solid black;">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">APPROVEMENT</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <form id="upload-image-form" class="form-horizontal" action=""" method="post"
+            enctype="multipart/form-data">
+            {{ csrf_field() }}
+            <div class="modal-body" style=" display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;">
+                
+                    <h3>Apakah anda yakin menyetujui data ini?</h3>
+                
+            </div>
+            <input type="hidden" name="status" value="3" class="form-control"> 
+
+         
+                                         
+
+                                            
+                                        
+                           
+                            <div  style=" display: flex;
+                            justify-content: center!important;
+                            align-items: center!important;
+                            height: 50px!important;
+                            margin-top:12px">
+                            
+                                <button type="button" class="btn btn-secondary"
+                                    data-dismiss="modal">Belum</button>
+                                <button type="submit" class="btn btn-success"
+                                    style="">Setuju</button>
+                            </div>
+        </form>
+    </div>
+</div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="addlates" tabindex="-1" role="dialog"
 aria-labelledby="exampleModalLabel" aria-hidden="true">
 <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content" style="border:1px solid black;">
