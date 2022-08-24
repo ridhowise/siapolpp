@@ -64,7 +64,7 @@ class UserController extends Controller
             $simpan->jenisjabatan = $req ->input('jenisjabatan');
             $simpan->diklat = $req ->input('diklat');
             $simpan->pendidikan = $req ->input('pendidikan');
-            $simpan->golongan = $req ->input('golongan');
+            $simpan->golongan_id = $req ->input('golongan_id');
             $simpan->gender = $req ->input('gender');
             $simpan->password = hash::make($req->input('password'));
             $simpan->salary = $req ->input('salary');
@@ -119,7 +119,7 @@ class UserController extends Controller
           $data->jenisjabatan = $request->jenisjabatan;
           $data->diklat = $request->diklat;
           $data->pendidikan = $request->pendidikan;
-          $data->golongan = $request->golongan;
+          $data->golongan_id = $request->golongan_id;
           $data->gender = $request->gender;
           $data->salary = $request->salary;
           $data->level_id = $request->level_id;

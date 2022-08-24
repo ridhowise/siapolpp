@@ -190,9 +190,12 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                         </select>
                     </div>
                 </div>
-                <div  class="form-group row"><label class="col-lg-3 form-control-label">Surat Izin/Sakit </label>
-                  <div class="col-lg-9">
+                <div  class="form-group row"><label class="col-lg-3 form-control-label">Surat Izin (Jika ada) </label>
+                  <div class="col-lg-4">
                     <input type="file" name="file">
+                  </div>
+                  <div class="col-lg-5">
+                  
                   </div>
                 </div>
                 
