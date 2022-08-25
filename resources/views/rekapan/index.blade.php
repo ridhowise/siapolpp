@@ -48,7 +48,7 @@
                                 @foreach ($data as $key => $items)
                                     <td>{{ $items->awal }} - {{$items->akhir}} </td>
                                    
-                                    <td><a class="btn btn-sm btn-info" type="submit"
+                                    <td><a class="btn btn-info" type="submit"
                                         href="days/{{ $items->id }}"><i class="fas fa-eye"></i> Lihat Detail</a></td>
                                     <td><a class="btn btn-sm btn-primary" type="submit"
                                         href="kedisiplinan/{{ $items->id }}"><i class="fas fa-arrow-right"></i> Input kedisiplinan</a></td>
@@ -67,14 +67,14 @@
                                        
                                         @elseif($items->status == 1 and Auth::User()->level_id == '2'  )
                                         <td><a class="btn btn-sm btn-warning" type="submit"
-                                            href="total/{{ $items->id }}"><i class="fas fa-spinner fa-spin"></i>Checker</a><a class="btn btn-warning" href="/total/create-pdf/{{$items->id}}"><i class="fas fa-arrow-down"></i></a></td>   
+                                            href="total/{{ $items->id }}"><i class="fas fa-spinner fa-spin"></i> Checker </a><a class="btn btn-sm btn-warning" href="/total/create-pdf/{{$items->id}}"><i class="fas fa-arrow-down"></i> Download</a></td>   
                                         @elseif($items->status == 1 and Auth::User()->level_id != '2' )
                                         <td><a class="btn btn-sm btn-secondary" type="submit"
                                             href="#"><i class="fas fa-spinner fa-spin"></i> Proses Checker</a></td>
 
                                             @elseif($items->status == 2 and Auth::User()->level_id == '1'   )
                                             <td><a class="btn btn-sm btn-warning" type="submit"
-                                                href="total/{{ $items->id }}"><i class="fas fa-spinner fa-spin"></i>Approvement</a><a class="btn btn-warning" href="/total/create-pdf/{{$items->id}}"><i class="fas fa-arrow-down"></i></a></td>   
+                                                href="total/{{ $items->id }}"><i class="fas fa-spinner fa-spin"></i> Approvement</a><a class="btn btn-sm btn-warning" href="/total/create-pdf/{{$items->id}}"><i class="fas fa-arrow-down"></i> Download</a></td>   
                                             @elseif($items->status == 2 and Auth::User()->level_id != '1' )
                                             <td><a class="btn btn-sm btn-secondary" type="submit"
                                                 href="#"><i class="fas fa-spinner fa-spin"></i> Proses Approvement</a></td>
