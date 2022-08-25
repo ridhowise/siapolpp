@@ -67,14 +67,14 @@
                                        
                                         @elseif($items->status == 1 and Auth::User()->level_id == '2'  )
                                         <td><a class="btn btn-sm btn-warning" type="submit"
-                                            href="total/{{ $items->id }}"><i class="fas fa-spinner fa-spin"></i>Checker</a></td>   
+                                            href="total/{{ $items->id }}"><i class="fas fa-spinner fa-spin"></i>Checker</a><a class="btn btn-warning" href="/total/create-pdf/{{$items->id}}"><i class="fas fa-arrow-down"></i></a></td>   
                                         @elseif($items->status == 1 and Auth::User()->level_id != '2' )
                                         <td><a class="btn btn-sm btn-secondary" type="submit"
                                             href="#"><i class="fas fa-spinner fa-spin"></i> Proses Checker</a></td>
 
                                             @elseif($items->status == 2 and Auth::User()->level_id == '1'   )
                                             <td><a class="btn btn-sm btn-warning" type="submit"
-                                                href="total/{{ $items->id }}"><i class="fas fa-spinner fa-spin"></i>Approvement</a></td>   
+                                                href="total/{{ $items->id }}"><i class="fas fa-spinner fa-spin"></i>Approvement</a><a class="btn btn-warning" href="/total/create-pdf/{{$items->id}}"><i class="fas fa-arrow-down"></i></a></td>   
                                             @elseif($items->status == 2 and Auth::User()->level_id != '1' )
                                             <td><a class="btn btn-sm btn-secondary" type="submit"
                                                 href="#"><i class="fas fa-spinner fa-spin"></i> Proses Approvement</a></td>
