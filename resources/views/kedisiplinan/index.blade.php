@@ -50,8 +50,12 @@
   <div class="blog-body">
     <br>
     <div class="blog-title">
-      <h4>Periode {{$data->awal}} -{{$data->akhir}}  <a class="btn btn-sm btn-primary" style="color:white" type="submit"
+      <h4>Periode {{$data->awal}} -{{$data->akhir}} </h4>
+      @if(Auth::User()->level_id == '14' or Auth::User()->level_id == '1' or Auth::User()->level_id == '13' or Auth::User()->level_id == '27' or Auth::User()->level_id == '2'  )
+      <a class="btn btn-sm btn-primary" style="color:white" type="submit"
         href="" data-toggle="modal" data-target="#add"><i class="fas fa-eye"></i> Input Finger</a></h4>
+      @else
+      @endif
      
     </div>
     <br>
@@ -81,8 +85,16 @@
                 <td>{{ $items->total}} %</td>
                
                 <td><a class="btn btn-sm btn-info" style="color:white" type="submit"
-                    href="/finger/{{ $items->id }}"><i class="fas fa-eye"></i>Detail</a><a class="btn btn-sm btn-success" style="color:white" type="submit"
-                    href="/ubahfinger/{{ $items->id }}"><i class="fas fa-edit"></i>Edit</a><a class="btn btn-warning" href="/kedisiplinan/create-pdf/{{$items->id}}"><i class="fas fa-arrow-down"></i></a>
+                    href="/finger/{{ $items->id }}"><i class="fas fa-eye"></i>Detail</a>
+                    @if(Auth::User()->level_id == '14' or Auth::User()->level_id == '1' or Auth::User()->level_id == '13' or Auth::User()->level_id == '27' or Auth::User()->level_id == '2'  )
+
+                    <a class="btn btn-sm btn-success" style="color:white" type="submit"
+                    href="/ubahfinger/{{ $items->id }}"><i class="fas fa-edit"></i>Edit</a>
+
+                    @else
+                    @endif
+                    
+                    <a class="btn btn-warning" href="/kedisiplinan/create-pdf/{{$items->id}}"><i class="fas fa-arrow-down"></i></a>
                     
                 </td>
 

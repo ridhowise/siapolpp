@@ -11,8 +11,15 @@
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
   <div class="card-header py-3">
+    @if(Auth::User()->level_id == '14' or Auth::User()->level_id == '1' or Auth::User()->level_id == '13' or Auth::User()->level_id == '27' or Auth::User()->level_id == '2'  )
+
     <h6 class="m-0 font-weight-bold text-primary">User <a href="{{ url('user/create') }}" class="btn btn-sm btn-primary" >Create</a>
-      {{$kategori->kategori ?? ''}}</h6>
+      </h6>
+
+    @else
+    @endif
+
+
   </div>
   <div class="card-body">
     <div class="table-responsive">
@@ -69,7 +76,11 @@
                     <!--<a href="{{ route('user.show',$items->id) }}">Lihat</a>
                     <a class="btn btn-sm btn-success" type="submit" href="{{ route('user.edit',$items->id) }}">Edit</a>-->
                     <a class="btn btn-sm btn-primary" type="submit" href="{{ route('user.show',$items->id) }}">Show</a>
+                    @if(Auth::User()->level_id == '14' or Auth::User()->level_id == '1' or Auth::User()->level_id == '13' or Auth::User()->level_id == '27' or Auth::User()->level_id == '2'  )
+
                     <a class="btn btn-sm btn-success" type="submit" href="{{ route('user.edit',$items->id) }}">Edit</a>
+                    @else
+                    @endif
                     <button style="color:white;" class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">Delete</button>
                 </form>
                 </td>

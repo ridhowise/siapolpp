@@ -50,8 +50,14 @@
   <div class="blog-body">
     <br>
     <div class="blog-title">
-      <h4>Periode {{$data->awal}} -{{$data->akhir}}  <a class="btn btn-sm btn-primary" style="color:white" type="submit"
-        href="" data-toggle="modal" data-target="#adds"><i class="fas fa-eye"></i> Input Kinerja</a></h4>
+      <h4>Periode {{$data->awal}} -{{$data->akhir}}</h4>
+        
+        @if(Auth::User()->level_id == '14' or Auth::User()->level_id == '1' or Auth::User()->level_id == '13' or Auth::User()->level_id == '27' or Auth::User()->level_id == '2'  )
+        
+        <a class="btn btn-sm btn-primary" style="color:white" type="submit"
+        href="" data-toggle="modal" data-target="#adds"><i class="fas fa-eye"></i> Input Kinerja</a>
+        @else
+        @endif
      
     </div>
     <br>
