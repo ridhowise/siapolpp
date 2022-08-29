@@ -41,7 +41,7 @@ class kedisiplinanController extends Controller
     {
         
         $data=month::findOrFail($id);
-        $disiplin=disiplin::where('month_id',$id)->orderBy('id', 'ASC')->get();
+        $disiplin=disiplin::where('month_id',$id)->with('user')->get()->sortByDesc('user.golongan_id');
         $days=days::where('month_id',$id)->get();
         $user=disiplin::where([
             ['month_id', '=', $id],

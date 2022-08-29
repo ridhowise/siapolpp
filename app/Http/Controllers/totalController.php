@@ -35,7 +35,7 @@ class totalController extends Controller
 	 
     public function index($id)
     {
-        $data=total::where('month_id',$id)->orderBy('id', 'ASC')->get();
+        $data=total::where('month_id',$id)->with('user')->get()->sortByDesc('user.golongan_id');
         $status=month::findOrFail($id);
 
         // $data=total::where('month_id',$id)->where('disiplin','!=','null')->where('produktifitas','<', 100 )->orderBy('id', 'ASC')->get();
