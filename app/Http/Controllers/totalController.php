@@ -35,7 +35,7 @@ class totalController extends Controller
 	 
     public function index($id)
     {
-        $data=total::where('month_id',$id)->with('user')->get()->sortByDesc('user.golongan_id');
+        $data=total::where('month_id',$id)->with('user')->get()->sortByDesc('user.golongan_id')->sortByDesc('user.salary');
         $status=month::findOrFail($id);
 
         // $data=total::where('month_id',$id)->where('disiplin','!=','null')->where('produktifitas','<', 100 )->orderBy('id', 'ASC')->get();
@@ -200,7 +200,7 @@ class totalController extends Controller
 
     public function exportPDF($id) {
         $bulan = month::findorFail($id);
-        $data=total::where('month_id',$id)->get();
+        $data=total::where('month_id',$id)->with('user')->get()->sortByDesc('user.golongan_id')->sortByDesc('user.salary');
 
         $total = 0;
         $totals = 0;
