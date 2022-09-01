@@ -75,7 +75,7 @@
                     {{ method_field('DELETE') }}
                     <!--<a href="{{ route('user.show',$items->id) }}">Lihat</a>
                     <a class="btn btn-sm btn-success" type="submit" href="{{ route('user.edit',$items->id) }}">Edit</a>-->
-                    <a class="btn btn-sm btn-primary" type="submit" href="{{ route('user.show',$items->id) }}">Show</a>
+                    <a class="btn btn-sm btn-primary" type="submit" href="{{ route('user.show',$items->id) }}">Detail</a>
                     @if(Auth::User()->level_id == '14' or Auth::User()->level_id == '1' or Auth::User()->level_id == '13' or Auth::User()->level_id == '27' or Auth::User()->level_id == '2'  )
 
                     <a class="btn btn-sm btn-success" type="submit" href="{{ route('user.edit',$items->id) }}">Edit</a>
