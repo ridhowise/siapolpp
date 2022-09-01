@@ -55,8 +55,8 @@ Route::resource('rekapan', 'rekapanController')->middleware('auth');
 Route::resource('level', 'LevelController')->middleware('auth');
 Route::resource('user', 'UserController')->middleware('auth');
 
-Route::get('/user/file/{id}', 'userController@file')->name('file')->middleware('auth');
-Route::post('/user/file/{id}', 'userController@filestore')->name('filestore')->middleware('auth');
+Route::get('/user/file/{id}', 'UserController@file')->name('file')->middleware('auth');
+Route::post('/user/file/{id}', 'UserController@filestore')->name('filestore')->middleware('auth');
 // Route::get('/user/file/{id}',[userController::class, 'file'])->middleware('auth');
 
 Route::resource('kelas', 'kelasController')->middleware('auth');
