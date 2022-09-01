@@ -1,5 +1,5 @@
 <?php
-use App\Http\Controllers\userController;
+// use App\Http\Controllers\userController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -55,9 +55,9 @@ Route::resource('rekapan', 'rekapanController')->middleware('auth');
 Route::resource('level', 'LevelController')->middleware('auth');
 Route::resource('user', 'UserController')->middleware('auth');
 
-// Route::get('/user/file/{id}', 'userController@file')->name('file')->middleware('auth');
+Route::get('/user/file/{id}', 'userController@file')->name('file')->middleware('auth');
 Route::post('/user/file/{id}', 'userController@filestore')->name('filestore')->middleware('auth');
-Route::get('/user/file/{id}',[userController::class, 'file'])->middleware('auth');
+// Route::get('/user/file/{id}',[userController::class, 'file'])->middleware('auth');
 
 Route::resource('kelas', 'kelasController')->middleware('auth');
 Route::get('detail/kehadiran/{id}', 'detailController@kehadiran')->name('kehadiran')->middleware('auth');
