@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use  App\Models\User;
 use  App\Models\Level;
+use  App\Models\lampiran;
 use Image;
 use File;
 
@@ -90,6 +91,52 @@ class UserController extends Controller
     }
 
     public function update(Request $request, $id)
+    {
+        $data = User::findOrFail($id);
+        
+
+        if ($request->hasFile('image')){
+            $image_path = public_path("/images".$data->images);
+            if (File::exists($image_path)) {
+                File::delete($image_path);
+            }
+            $bannerImage = $request->file('image');
+            $imgName = $bannerImage->getClientOriginalName();
+            $destinationPath = public_path('/images');
+            $bannerImage->move($destinationPath, $imgName);
+          } else {
+            $imgName = $data->images;
+          }
+          $data->name = $request->name;
+          $data->email = $request->email;
+          $data->images = $imgName;
+          $data->nip = $request->nip;
+          $data->unit = $request->unit;
+          $data->alamat = $request->alamat;
+          $data->tempat = $request->tempat;
+          $data->tanggal = $request->tanggal;
+          $data->telepon = $request->telepon;
+          $data->nosk = $request->nosk;
+          $data->jenisjabatan = $request->jenisjabatan;
+          $data->diklat = $request->diklat;
+          $data->pendidikan = $request->pendidikan;
+          $data->golongan_id = $request->golongan_id;
+          $data->gender = $request->gender;
+          $data->salary = $request->salary;
+          $data->level_id = $request->level_id;
+          $data->save();
+        return redirect()->route('user.index')->with('alert-success', 'Berhasil Update Data!');
+    }
+
+    public function file($id)
+    {
+        $data = User::findOrFail($id);
+        $levels = Level::get();
+        $file = lampiran::get();
+        return view('user.file', compact('data','levels','file'));
+    }
+
+    public function filestore(Request $request, $id)
     {
         $data = User::findOrFail($id);
         

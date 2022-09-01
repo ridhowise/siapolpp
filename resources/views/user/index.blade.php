@@ -30,17 +30,17 @@
             <th>Foto</th>
             <th>NIP</th>
             <th>Nama</th>
-            <th>Tempat</th>
+            {{-- <th>Tempat</th>
             <th>Tanggal Lahir</th>
             <th>Jenis Kelamin</th>
             <th>alamat</th>
-            <th>Nomor HP</th>
+            <th>Nomor HP</th> --}}
             <th>Golongan</th>
             <th>Pendidikan</th>
-            <th>Diklat</th>
-            <th>Jenis Jabatan</th>
+            {{-- <th>Diklat</th>
+            <th>Jenis Jabatan</th> --}}
             <th>Jabatan</th>
-            <th>No SK</th>
+            {{-- <th>No SK</th> --}}
             <th>Action</th>
           </tr>
         </thead>
@@ -56,17 +56,17 @@
                 </td>
                 <td>{{ $items->nip }}</td>
                 <td>{{ $items->name }}</td>
-                <td>{{ $items->tempat }}</td>
+                {{-- <td>{{ $items->tempat }}</td>
                 <td>{{ $items->tanggal }}</td>
                 <td>{{ $items->gender }}</td>
                 <td>{{ $items->alamat }}</td>
-                <td>{{ $items->telepon }}</td>
+                <td>{{ $items->telepon }}</td> --}}
                 <td>{{ $items->golongan->name }}</td>
                 <td>{{ $items->pendidikan }}</td>
-                <td>{{ $items->diklat }}</td>
-                <td>{{ $items->jenisjabatan }}</td>
+                {{-- <td>{{ $items->diklat }}</td>
+                <td>{{ $items->jenisjabatan }}</td> --}}
                 <td>{{ $items->level->name }}</td>
-                <td>{{ $items->nosk }}</td>
+                {{-- <td>{{ $items->nosk }}</td> --}}
 
                 <td>
 				

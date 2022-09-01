@@ -66,14 +66,40 @@
                                                 <h3>
                                                   {{$data->name}}<span class="font-weight-light"></span>
                                                 </h3>
-                                                <div class="h5 font-weight-300">
-                                                  <i class="ni location_pin mr-2"></i>Username: {{$data->email}}
-                                                </div>
-                                                <div class="h5 mt-4">
-                                                  <i class="ni business_briefcase-24 mr-2"></i>{{$data->level->name}}
-                                                </div>
-                                               
+                                                <br>
+                                              </div>
+                                              <div>
+                                                  <div class="form-group row"><label class="col-lg-4 form-control-label">Username Login</label>
+                                                  <div class="">: {{$data->email}}</div></div>
+                                                  <div class="form-group row"><label class="col-lg-4 form-control-label">NIP</label>
+                                                  <div class="">: {{$data->nip}}</div></div>
+                                                  <div class="form-group row"><label class="col-lg-4 form-control-label">Jenis Kelamin</label>
+                                                  <div class="">: {{$data->gender}}</div></div>
+                                                  <div class="form-group row"><label class="col-lg-4 form-control-label">Tempat/Tanggal Lahir</label>
+                                                  <div class="">: {{$data->tempat}}, {{$data->tanggal}}</div></div>
+                                                    <div class="form-group row"><label class="col-lg-4 form-control-label">Alamat</label>
+                                                    <div class="">: {{$data->alamat}}</div></div>
+                                                    <div class="form-group row"><label class="col-lg-4 form-control-label">Golongan</label>
+                                                    <div class="">: {{$data->golongan->name}}</div></div>
+                                                    <div class="form-group row"><label class="col-lg-4 form-control-label">Pendidikan</label>
+                                                    <div class="">: {{$data->pendidikan}}</div></div>
+                                                    <div class="form-group row"><label class="col-lg-4 form-control-label">Diklat</label>
+                                                    <div class="">: {{$data->diklat}}</div></div>
+                                                    <div class="form-group row"><label class="col-lg-4 form-control-label">Jenis Jabatan</label>
+                                                      <div class="">: {{$data->jenisjabatan}}</div></div>
+                                                      <div class="form-group row"><label class="col-lg-4 form-control-label">Jabatan</label>
+                                                      <div class="">: {{$data->level->name}}</div></div>
+                                                      <div class="form-group row"><label class="col-lg-4 form-control-label">No SK</label>
+                                                      <div class="">: {{$data->nosk}}</div></div>
+                                                     
+                                                
+
+                                                      <div class="text-center">
+
                                                 <hr class="my-4">
+                                                <a class="btn btn-sm btn-success" type="submit" href="/user/file/{{$data->id}}">Tambah File</a>
+                                                      </div>
+
                                                 {{-- <p>Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music.</p>
                                                 <a href="https://www.creative-tim.com/product/argon-dashboard" target="_blank">Show more</a> --}}
                                               </div>
