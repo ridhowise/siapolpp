@@ -19,7 +19,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $data = User::get()->sortByDesc('golongan_id')->sortByDesc('salary');
+        $data = User::all();
 		// $data = User::all();
         return view('user.index', compact('data'));
     }
@@ -80,7 +80,8 @@ class UserController extends Controller
     public function show($id)
     {
         $data = User::findOrFail($id);
-        return view('user.show', compact('data'));
+        $file=lampiran::where('user_id',$id)->get();
+        return view('user.show', compact('data','file'));
     }
 
     public function edit($id)
@@ -132,47 +133,28 @@ class UserController extends Controller
     {
         $data = User::findOrFail($id);
         $levels = Level::get();
-        $file = lampiran::get();
+        $file=lampiran::where('user_id',$id)->get();
         return view('user.file', compact('data','levels','file'));
     }
 
     public function filestore(Request $request, $id)
     {
-        $data = User::findOrFail($id);
-        
+        $tujuan_upload = 'data_file';
+        $file = $request->file('file');
+		$nama_file = time()."_".$file->getClientOriginalName();
+		$file->move($tujuan_upload,$nama_file);
+          
+            $simpan=new Lampiran;
+            $simpan->file = $nama_file;
+            $simpan->tipe = $request ->input('tipe');
+            $simpan->user_id = $id;
 
-        if ($request->hasFile('image')){
-            $image_path = public_path("/images".$data->images);
-            if (File::exists($image_path)) {
-                File::delete($image_path);
-            }
-            $bannerImage = $request->file('image');
-            $imgName = $bannerImage->getClientOriginalName();
-            $destinationPath = public_path('/images');
-            $bannerImage->move($destinationPath, $imgName);
-          } else {
-            $imgName = $data->images;
-          }
-          $data->name = $request->name;
-          $data->email = $request->email;
-          $data->images = $imgName;
-          $data->nip = $request->nip;
-          $data->unit = $request->unit;
-          $data->alamat = $request->alamat;
-          $data->tempat = $request->tempat;
-          $data->tanggal = $request->tanggal;
-          $data->telepon = $request->telepon;
-          $data->nosk = $request->nosk;
-          $data->jenisjabatan = $request->jenisjabatan;
-          $data->diklat = $request->diklat;
-          $data->pendidikan = $request->pendidikan;
-          $data->golongan_id = $request->golongan_id;
-          $data->gender = $request->gender;
-          $data->salary = $request->salary;
-          $data->level_id = $request->level_id;
-          $data->save();
-        return redirect()->route('user.index')->with('alert-success', 'Berhasil Update Data!');
+
+            $simpan->save();
+
+		return redirect()->route('user.index')->with('alert-success', 'Berhasil Menambahkan Data!');
     }
+    
 
     public function destroy($id)
     {

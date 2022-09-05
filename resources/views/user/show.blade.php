@@ -26,7 +26,7 @@
                                    
                                        
                                     <div class="row">
-                                        <div class="col-xl-8 m-auto order-xl-2 mb-5 mb-xl-0">
+                                        <div class="col-xl-9 m-auto order-xl-2 mb-5 mb-xl-0">
                                           <div class="card card-profile shadow">
                                             <div class="row justify-content-center">
                                               <div class="col-lg-3 order-lg-2">
@@ -97,8 +97,39 @@
                                                       <div class="text-center">
 
                                                 <hr class="my-4">
-                                                <a class="btn btn-sm btn-success" type="submit" href="/user/file/{{$data->id}}">Tambah File</a>
-                                                      </div>
+                                                <a class="btn-sm btn-success" type="submit" href="/user/file/{{$data->id}}">Tambah File</a>
+                                                      </div><br>
+
+
+                                                      {{-- <div class="table-responsive"> --}}
+                                                        <div class="table">
+                                                        <table class="table table-bordered"  width="100%" cellspacing="0">
+                                                          <thead>
+                                                            <tr>
+                                                              <th>Tipe</th>
+                                                              <th>File</th>                                                             
+                                                            </tr>
+                                                          </thead>
+                                                          
+                                                          <tbody>
+                                                              @php
+                                                              $no = 1;
+                                                              @endphp
+                                                              @foreach($file as $items)
+                                                              <tr>
+                                                                 <td>{{$items->tipe}}</td>
+                                                                 <td> <a href="{{ url('data_file') }}/{{ $items->file }}"
+                                                                  download="{{ $items->file }}">
+                                                                  <button type="button" class="btn-sm btn-info">
+                                                                   <i class="glyphicon glyphicon-download">
+                                                                    Download
+                                                                    </i>
+                                                                  </button>
+                                                                  </a></td>
+                                                              </tr>
+                                                              @endforeach
+                                                          </tbody>
+                                                        </table>
 
                                                 {{-- <p>Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music.</p>
                                                 <a href="https://www.creative-tim.com/product/argon-dashboard" target="_blank">Show more</a> --}}

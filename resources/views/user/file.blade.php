@@ -29,7 +29,7 @@
                                     <div class="panel-body  p-xl-3">
                                         <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
                                         {{ csrf_field() }}
-                                        <input type="hidden" name="_method" value="PATCH">
+                                        {{-- <input type="hidden" name="_method" value="PATCH"> --}}
 
                                                 
                                             </div>
@@ -56,7 +56,7 @@
                                             <div class="form-group row"><label class="col-lg-3 form-control-label">File</label>
 
                                                 <div class="col-lg-9">
-                                                <input type="file" name="image" class="form-control"> 
+                                                <input type="file" name="file" class="form-control"> 
                                                 <br>
                                                 {{-- Current pic : <img style="width:100px" src="{{ URL::asset('images/') }}/{{$data->images}}"> --}}
                                                 </div>
