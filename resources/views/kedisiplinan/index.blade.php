@@ -191,7 +191,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
             {{ csrf_field() }}
             <div class="modal-body">
 
-                <div class="form-group row"><label class="col-lg-3 form-control-label">Nama</label>
+                <div required class="form-group row"><label class="col-lg-3 form-control-label">Nama</label>
 
                     <div class="col-lg-5">
                         <select name="nama" id="nama" class="form-control select" required>

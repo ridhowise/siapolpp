@@ -41,7 +41,7 @@ class kedisiplinanController extends Controller
     {
         
         $data=month::findOrFail($id);
-        $disiplin=disiplin::where('month_id',$id)->with('user')->get()->sortByDesc('user.salary');
+        $disiplin=disiplin::where('month_id',$id)->get();
         $days=days::where('month_id',$id)->get();
         $user=disiplin::where([
             ['month_id', '=', $id],
@@ -77,6 +77,10 @@ class kedisiplinanController extends Controller
      */
     public function store(Request $request,$id)
     {
+
+        // $this->validate($request, [
+        //     'name' => 'required'
+        // ]);
 
         $user= $request->input('nama');
         $disiplin=disiplin::where([
