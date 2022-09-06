@@ -34,6 +34,7 @@
                                 <tr>
                                     <th>Periode</th>
                                     <th>Daftar Hari Kerja</th>
+                                    <th>Rekap Finger</th>
                                     <th>Kedisiplinan</th>
                                     <th>Produktifitas</th>
                                     <th>Total</th>
@@ -48,8 +49,20 @@
                                 @foreach ($data as $key => $items)
                                     <td>{{ $items->awal }} - {{$items->akhir}} </td>
                                    
-                                    <td><a class="btn btn-info" type="submit"
+                                    <td><a class="btn-sm btn-info" type="submit"
                                         href="days/{{ $items->id }}"><i class="fas fa-eye"></i> Lihat Detail</a></td>
+                                        @if($items->file == null)
+                                        <td></td>
+                                        @else
+                                        <td> <a href="{{ url('data_file') }}/{{ $items->file }}"
+                                          download="{{ $items->file }}">
+                                          <button type="button" class="btn-sm btn-success">
+                                           <i class="glyphicon glyphicon-download">
+                                            Download
+                                            </i>
+                                          </button>
+                                          </a></td>
+                                          @endif
                                     <td><a class="btn btn-sm btn-primary" type="submit"
                                         href="kedisiplinan/{{ $items->id }}"><i class="fas fa-arrow-right"></i> Input kedisiplinan</a></td>
                                         <td><a class="btn btn-sm btn-primary" type="submit"
@@ -197,6 +210,12 @@
 
                                             </div>
                             </div>
+
+                            <div class="form-group row"><label class="col-lg-3 form-control-label">File </label>
+                                <div class="col-lg-9">
+                                  <input type="file" name="file" required>
+                                </div>
+                              </div>
 
                             <div class="row">
                                 <div class="col">

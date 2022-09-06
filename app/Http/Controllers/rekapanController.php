@@ -62,12 +62,16 @@ class rekapanController extends Controller
     public function store(Request $request)
     {
 
-
+        $tujuan_upload = 'data_file';
+        $file = $request->file('file');
+		$nama_file = time()."_".$file->getClientOriginalName();
+		$file->move($tujuan_upload,$nama_file);
+          
         $data = new month;
         $data->awal = $request->input('awal');
         $data->akhir = $request->input('akhir');
         $data->status = 0;
-
+        $data->file = $nama_file;
 
         $data -> save();
 
