@@ -201,7 +201,7 @@ class totalController extends Controller
 
     public function exportPDF($id) {
         $bulan = month::findorFail($id);
-        $data=total::where('month_id',$id)->with('user')->get()->sortByDesc('user.golongan_id')->sortByDesc('user.salary');
+        $data=total::where('month_id',$id)->get();
 
         $total = 0;
         $totals = 0;

@@ -42,7 +42,7 @@ class produktifitasController extends Controller
     {
         
         $data=month::findOrFail($id);
-        $produktifitas=produktifitas::where('month_id',$id)->with('user')->get()->sortByDesc('user.salary');
+        $produktifitas=produktifitas::where('month_id',$id)->get();
         $user=produktifitas::where([
             ['month_id', '=', $id],
             ['file', '=', null],
