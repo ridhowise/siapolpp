@@ -43,7 +43,7 @@
                                             <div class="form-group row"><label class="col-lg-2 form-control-label">Jam Masuk</label>
 
                                               <div class="col-lg-10">
-                      <input type="time" readonly name="timet" placeholder="Name" value="{{ $data->timet }}" class="form-control"> 
+                      <input type="time"  name="timet" placeholder="Name" value="{{ $data->timet }}" class="form-control"> 
                                               </div>
                                           </div>
   

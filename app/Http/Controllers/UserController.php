@@ -19,7 +19,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $data = User::all();
+        $data = User::orderBy('tingkattpp', 'ASC')->orderBy('golongan_id', 'DESC')->get();
 		// $data = User::all();
         return view('user.index', compact('data'));
     }
