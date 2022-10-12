@@ -113,6 +113,7 @@ Route::get('/days/{id}', 'daysController@index')->name('days')->middleware('auth
 Route::get('/kedisiplinan/{id}', 'kedisiplinanController@index')->name('kedisiplinan')->middleware('auth');
 Route::post('/kedisiplinan/{id}', 'kedisiplinanController@store')->name('store')->middleware('auth');
 Route::get('/total/create-pdf/{id}', 'totalController@exportPDF')->name('exportPDF')->middleware('auth');
+Route::get('/totalpreview/create-pdf/{id}', 'totalController@exportPDFF')->name('exportPDFF')->middleware('auth');
 Route::get('/kedisiplinan/create-pdf/{id}', 'kedisiplinanController@exportPDF')->name('exportPDF')->middleware('auth');
 
 Route::get('/maintenance', 'maintenanceController@index')->name('maintenance')->middleware('auth');

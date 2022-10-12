@@ -221,4 +221,28 @@ class totalController extends Controller
         return $pdf_doc->download('tpp.pdf');
         // return PDF::setOptions(['isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true])->loadView('reports.invoiceSell')->stream();
     }    
+
+    public function exportPDFF($id) {
+        $bulan = month::findorFail($id);
+        $data=total::where('month_id',$id)->get();
+
+        $total = 0;
+        $totals = 0;
+
+        foreach($data as $key => $items){
+            $totals += $items->tpp;
+
+            if($items->disiplin == null) {
+            $total += 60*$items->tpp/100-60*$items->tpp/100*$items->produktifitas/100;
+            } else {
+            $total += 40*$items->tpp/100-40*$items->tpp/100*$items->disiplin/100+60*$items->tpp/100-60*$items->tpp/100*$items->produktifitas/100;
+            }
+        }
+
+        $pdf_doc = PDF::setOptions(['isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true])->loadView('exporttotalpreview_pdf', array('data' => $data,'bulan'=>$bulan,'total' => $total,'totals' => $totals))->setPaper('legal', 'landscape');
+        
+
+        return $pdf_doc->download('tpp.pdf');
+        // return PDF::setOptions(['isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true])->loadView('reports.invoiceSell')->stream();
+    }    
 }
