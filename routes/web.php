@@ -67,6 +67,11 @@ Route::resource('quiz', 'quizController')->middleware('auth');
 Route::resource('persediaan', 'persediaanController')->middleware('auth');
 Route::get('/persediaans/export_excel', 'persediaanController@export_excel')->middleware('auth');
 
+Route::resource('suratmasuk', 'suratmasukController')->middleware('auth');
+Route::resource('suratkeluar', 'suratkeluarController')->middleware('auth');
+Route::resource('indeks', 'indeksController')->middleware('auth');
+
+
 Route::resource('masuk', 'masukController')->middleware('auth');
 Route::get('/barangmasuk/{id}', 'barangmasukController@index')->name('barangmasuk')->middleware('auth');
 Route::resource('keluar', 'keluarController')->middleware('auth');

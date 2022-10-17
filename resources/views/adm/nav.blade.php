@@ -36,10 +36,10 @@
   
     <div id="collapse4" class="collapse " aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="py-2 collapse-inner rounded" style="">
-            <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
+            {{-- <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
                DUK
             </a>
-            <hr class="sidebar-divider">
+            <hr class="sidebar-divider"> --}}
 
             <a class="collapse-item " style="color:white" href="{{ url('user') }}">
                 Nominatif PNS
@@ -50,14 +50,25 @@
             </a>
             <hr class="sidebar-divider">
 
-            <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
-                SKUM
+            <a class="collapse-item " style="color:white" href="{{ url('indeks') }}">
+                Indeks
+            </a>
+  
+            <a class="collapse-item " style="color:white" href="{{ url('suratmasuk') }}">
+                Surat Masuk
+            </a>
+
+            <a class="collapse-item " style="color:white" href="{{ url('suratkeluar') }}">
+                Surat Keluar
             </a>
             <hr class="sidebar-divider">
 
-            <a class="collapse-item " style="color:white" href="{{ url('rekapan') }}">
-              TPP
-          </a>
+            {{-- <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
+                SKUM
+            </a>
+            <hr class="sidebar-divider"> --}}
+
+          
   
   
         </div>
@@ -73,10 +84,15 @@
   <div id="collapse1" class="collapse " aria-labelledby="headingTwo" data-parent="#accordionSidebar">
       <div class="py-2 collapse-inner rounded" style="">
 
-        <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
+        {{-- <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
             Laporan Keuangan
          </a>
-         <br>
+         <br> --}}
+
+         <a class="collapse-item " style="color:white" href="{{ url('rekapan') }}">
+            TPP
+        </a>
+        
         <hr class="sidebar-divider">
 
           <a class="collapse-item " style="color:white" href="{{ url('persediaan') }}">

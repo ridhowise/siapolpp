@@ -208,8 +208,8 @@ class CreateUsersTable extends Migration
             $kolom->timestamps();
         });
     
-        
-      
+
+       
     }
 
     /**
