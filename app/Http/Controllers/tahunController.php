@@ -78,7 +78,7 @@ class tahunController extends Controller
 
 
         //request()->pic->move(public_path('assets/images'), $imageName);
-        //return redirect('pertemuan');
+        //return redirect('tahun');
 		
         return back();
            
@@ -99,7 +99,7 @@ class tahunController extends Controller
      */
     public function edit($id)
     {
-        $data = pertemuan::findOrFail($id);
+        $data = tahun::findOrFail($id);
         return response()->json([
             'data' => $data,
     
@@ -115,7 +115,7 @@ class tahunController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = pertemuan::where('id', $id)->first();
+        $data = tahun::where('id', $id)->first();
 
 		if ($request->file('image')) {
             $image = $request->file('image');
@@ -132,7 +132,7 @@ class tahunController extends Controller
             $file_name = null;
         }
         
-        $data = new pertemuan;
+        $data = new tahun;
 		$data->name = $request->name;
         $data->tanggal = $request->tanggal;
 		$data->debit = $request->debit;
@@ -145,7 +145,7 @@ class tahunController extends Controller
 
 	
         $data -> save();
-		return redirect()->route('pertemuan.index')->with('alert-success', 'Data berhasil diubah!');
+		return redirect()->route('tahun.index')->with('alert-success', 'Data berhasil diubah!');
 		
     }
 
@@ -163,15 +163,15 @@ class tahunController extends Controller
         $hadir->save();
     
     
-        return back()->with('style', 'warning')->with('alert', '')->with('msg', 'Anda telah hadir di pertemuan ini');
+        return back()->with('style', 'warning')->with('alert', '')->with('msg', 'Anda telah hadir di tahun ini');
     }
     public function destroy($id)
     {
-        $data = pertemuan::where('id', $id)->first();
+        $data = tahun::where('id', $id)->first();
 		/**$picture = $data->pic;
         File::delete('images/'.$picture);
 		*/
-		pertemuan::find($id)->delete();
+		tahun::find($id)->delete();
         return back();
     }
     public function export_excel()
