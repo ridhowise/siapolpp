@@ -117,29 +117,8 @@ class tahunController extends Controller
     {
         $data = tahun::where('id', $id)->first();
 
-		if ($request->file('image')) {
-            $image = $request->file('image');
-
-            $file_name = time(). rand(1111, 9999) . '.' .$image->getClientOriginalExtension();
-
-            // $save_Path = 'images/'.$file_name;
-            //$save_Path = public_path('images/'.$file_name);
-
-            //Image::make($image->getRealPath())->resize(300, 236)->save($save_Path);
-            $image->move('images',$file_name);
-            \Image::make('images/'.$file_name)->resize(300, 300)->save('images/'.$file_name);
-        } else {
-            $file_name = null;
-        }
-        
-        $data = new tahun;
-		$data->name = $request->name;
-        $data->tanggal = $request->tanggal;
-		$data->debit = $request->debit;
-        $data->credit = $request->credit;
-        $data->source = $request->source;
-        $data->balance = $request->balance;
-        $data->pic = $file_name;
+		$data->tahun = $request->tahun;
+       
 
 
 

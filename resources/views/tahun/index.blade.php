@@ -83,9 +83,9 @@
                         <input type="hidden" name="id">
                         <div class="modal-body">
 
-                               <div  class="form-group row"><label class="col-lg-3 form-control-label">File </label>
-                                <div class="col-lg-9">
-                                  <input required type="file" name="filee">
+                            <div class="form-group row"><label class="col-lg-2 form-control-label">Tahun</label>
+                                <div class="col-lg-10">
+                                  <input type="text" name="tahun" placeholder="Tahun" class="form-control" required> 
                                 </div>
                               </div>
 
@@ -234,7 +234,7 @@
                 url: "{{ url('tahun') }}/" + id + "/edit",
                 success: function(res) {
                     $("#form-edit [name='id']").val(id);
-                    $("#form-edit [name='file']").val(res.data.file);
+                    $("#form-edit [name='tahun']").val(res.data.tahun);
 
 
                     $('#form-edit').attr('action', "./tahun/" + id);
