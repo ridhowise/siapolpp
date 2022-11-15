@@ -45,9 +45,9 @@
                 Nominatif PNS
             </a>
   
-            <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
+            {{-- <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
                 Nominatif NON-PNS
-            </a>
+            </a> --}}
             <hr class="sidebar-divider">
 
             <a class="collapse-item " style="color:white" href="{{ url('indeks') }}">
@@ -142,12 +142,23 @@
   
     <div id="collapse2" class="collapse " aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="py-2 collapse-inner rounded" style="">
-            <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
+            <a class="collapse-item " style="color:white" href="{{ url('renstra') }}">
                Renstra
             </a>
   
             <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
                 Renja
+            </a>
+
+            <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
+                IKU
+            </a>
+
+            <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
+                Perjanjian Kinerja
+            </a>
+            <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
+                Evaluasi Perjanjian Kinerja
             </a>
   
             <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
@@ -158,12 +169,9 @@
                 SPM
             </a>
             <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
-                Perjanjian Kinerja
+                Survey Kepuasan Masyarakat
             </a>
-            <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
-                Evaluasi Perjanjian Kinerja
-            </a>
-  
+            
         </div>
     </div>
   </li>

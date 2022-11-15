@@ -10,6 +10,9 @@ use App\Models\barangmasuk;
 use App\Models\keluar;
 use App\Models\barangkeluar;
 use App\Models\User;
+use App\Models\suratmasuk;
+use App\Models\suratkeluar;
+
 
 class HomeController extends Controller
 {
@@ -36,6 +39,9 @@ class HomeController extends Controller
         $masuk = masuk::count();
         $keluar = keluar::count();
         $persediaans = persediaan::all();
+        $pegawai = User::count();
+        $suratmasuk = suratmasuk::count();
+        $suratkeluar = suratkeluar::count();
         // $sisa = 0;
         // foreach($persediaans as $key => $items){
         // $sisa += $items->jumlah;
@@ -47,7 +53,7 @@ class HomeController extends Controller
   
        
         if (Auth::User()->role<>'0') {
-             return view('adm.index',compact('persediaan','masuk','keluar'));
+             return view('adm.index',compact('persediaan','masuk','keluar','pegawai','suratmasuk','suratkeluar'));
         }else {
             return view('auth.login');
         }

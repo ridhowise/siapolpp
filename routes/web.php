@@ -71,6 +71,7 @@ Route::resource('suratmasuk', 'suratmasukController')->middleware('auth');
 Route::resource('suratkeluar', 'suratkeluarController')->middleware('auth');
 Route::resource('indeks', 'indeksController')->middleware('auth');
 
+Route::resource('renstra', 'renstraController')->middleware('auth');
 
 Route::resource('masuk', 'masukController')->middleware('auth');
 Route::get('/barangmasuk/{id}', 'barangmasukController@index')->name('barangmasuk')->middleware('auth');

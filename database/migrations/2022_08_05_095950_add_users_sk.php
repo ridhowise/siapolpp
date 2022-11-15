@@ -23,6 +23,7 @@ class AddUsersSk extends Migration
             $table->string('nik')->nullable()->after('telepon');
             $table->string('nokk')->nullable()->after('telepon');
             $table->string('gender')->nullable()->after('telepon');
+            $table->string('tingkattpp')->nullable()->after('telepon');
 
     
 
