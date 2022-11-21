@@ -51,7 +51,7 @@
                                             {{ method_field('DELETE') }}
                                             {{-- <a href="{{ route('kibb.show',$items->id) }}">Show</a> --}}
 
-                                            <button type="button" onclick="showEdit({{$items->id}})" class="btn btn-sm btn-success" >Edit</a>
+                                            {{-- <button type="button" onclick="showEdit({{$items->id}})" class="btn btn-sm btn-success" >Edit</a> --}}
 
                                                 <button class="btn btn-sm btn-danger" type="submit"
                                                     onclick="return confirm('Yakin ingin menghapus data?')">Delete</button>
