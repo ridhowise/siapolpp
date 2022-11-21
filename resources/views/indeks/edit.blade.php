@@ -31,24 +31,27 @@
                                     </div>
                                     <div class="panel-body  p-xl-3">
                                        
-										@foreach($data as $datas)
-										<form class="form-horizontal" action="{{ route('level.update', $datas->id) }}" method="post">
+										<form class="form-horizontal" action="{{ route('indeks.update', $data->id) }}" method="post">
 										{{ csrf_field() }}
 										{{ method_field('PUT') }}
                                             <div class="form-group row"><label class="col-lg-2 form-control-label">Role</label>
 
                                                 <div class="col-lg-10">
-												<input type="text" name="name" placeholder="Name" value="{{ $datas->name }}" class="form-control"> 
+												<input type="text" name="kode" placeholder="Kode" value="{{ $data->kode}}" class="form-control"> 
                                                 </div>
                                             </div>
-                                            
+                                            <div class="form-group row"><label class="col-lg-2 form-control-label">Role</label>
+
+                                                <div class="col-lg-10">
+												<input type="text" name="judul" placeholder="judul" value="{{ $data->judul}}" class="form-control"> 
+                                                </div>
+                                            </div>
                                             <div class="form-group row">
                                                 <div class="col-lg-offset-2 col-lg-10">
                                                     <button class="btn btn-sm btn-primary" type="submit">Save</button>
                                                 </div>
                                             </div>
                                         </form>
-										@endforeach
                                     </div>
                                 </div>
                             </div>

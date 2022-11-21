@@ -37,7 +37,7 @@ class indeksController extends Controller
     public function store(Request $request)
     {
         $data = new indeks();
-		$data->detail = $request->detail;
+		// $data->detail = $request->detail;
         $data->kode = $request->kode;
 		$data->judul = $request->judul;
 		$data->save();
@@ -63,7 +63,8 @@ class indeksController extends Controller
      */
     public function edit($id)
     {
-        $data = indeks::where('id', $id)->get();
+        $data = indeks::where('id', $id)->first();
+        // dd($data);
 		return view('indeks.edit', compact('data'));
     }
 
@@ -77,7 +78,8 @@ class indeksController extends Controller
     public function update(Request $request, $id)
     {
         $data = indeks::where('id', $id)->first();
-		$data->name = $request->name;
+        $data->kode = $request->kode;
+		$data->judul = $request->judul;
 		$data->save();
 		return redirect()->route('indeks.index')->with('alert-success', 'Data berhasil diubah!');
     }

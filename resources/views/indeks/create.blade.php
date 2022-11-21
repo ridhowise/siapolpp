@@ -42,12 +42,12 @@
 												<input type="text" name="judul" placeholder="Judul" class="form-control" required> 
                                                 </div>
                                             </div>
-                                            <div class="form-group row"><label class="col-lg-2 form-control-label">Detail</label>
+                                            {{-- <div class="form-group row"><label class="col-lg-2 form-control-label">Detail</label>
 
                                                 <div class="col-lg-10">
 												<input type="text" name="detail" placeholder="Detail" class="form-control" required> 
                                                 </div>
-                                            </div>
+                                            </div> --}}
                                             
                                             <div class="form-group row">
                                                 <div class="col-lg-offset-2 col-lg-10">

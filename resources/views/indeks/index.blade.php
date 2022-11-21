@@ -21,7 +21,6 @@
             <th>No</th>
             <th>Kode</th>
             <th>Judul</th>
-            <th>Detail</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -35,7 +34,6 @@
             <td>{{ $no++ }}</td>
             <td>{{ $items->kode }}</td>
             <td>{{ $items->judul }}</td>
-            <td>{{ $items->detail }}</td>
 
             <td>
             <form action="{{ route('indeks.destroy', $items->id) }}" method="post">
