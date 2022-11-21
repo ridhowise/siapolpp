@@ -146,11 +146,11 @@
                Renstra
             </a>
   
-            <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
+            <a class="collapse-item " style="color:white" href="{{ url('renja') }}">
                 Renja
             </a>
 
-            <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
+            <a class="collapse-item " style="color:white" href="{{ url('iku') }}">
                 IKU
             </a>
 
@@ -161,7 +161,7 @@
                 Evaluasi Perjanjian Kinerja
             </a>
   
-            <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
+            <a class="collapse-item " style="color:white" href="{{ url('lakip') }}">
                 LAKIP
             </a>
   

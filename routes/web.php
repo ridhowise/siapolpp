@@ -72,6 +72,9 @@ Route::resource('suratkeluar', 'suratkeluarController')->middleware('auth');
 Route::resource('indeks', 'indeksController')->middleware('auth');
 
 Route::resource('renstra', 'renstraController')->middleware('auth');
+Route::resource('renja', 'renjaController')->middleware('auth');
+Route::resource('iku', 'ikuController')->middleware('auth');
+Route::resource('lakip', 'lakipController')->middleware('auth');
 
 Route::resource('masuk', 'masukController')->middleware('auth');
 Route::get('/barangmasuk/{id}', 'barangmasukController@index')->name('barangmasuk')->middleware('auth');

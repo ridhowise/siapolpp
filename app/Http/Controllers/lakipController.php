@@ -15,7 +15,7 @@ use Auth;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\ExportExcel;
 
-class renstraController extends Controller
+class lakipController extends Controller
 {
 	
 	
@@ -32,11 +32,11 @@ class renstraController extends Controller
 	 
     public function index()
     {
-        $data=perencanaan::where('tipe', '=', 1)->get();
+        $data=perencanaan::where('tipe', '=', 6)->get();
         $indeks = indeks::all();
 
         
-        return view('renstra.index',compact('data','indeks'));
+        return view('lakip.index',compact('data','indeks'));
     }
 
     /**
@@ -49,7 +49,7 @@ class renstraController extends Controller
         $data=perencanaan::all();
         $indeks = indeks::all();
        
-        return view('renstra.create',compact('data','indeks'));
+        return view('lakip.create',compact('data','indeks'));
 		
     }
 
@@ -72,7 +72,7 @@ class renstraController extends Controller
         
         $data = new perencanaan;
         $data->judul = $request->judul;
-        $data->tipe = 1;
+        $data->tipe = 6;
 
 
 
@@ -146,14 +146,14 @@ class renstraController extends Controller
         
 		
         $data->judul = $request->judul;
-        $data->tipe = 1;
+        $data->tipe = 6;
 
         // $data->user_id = $admin;
         $data->file = $nama_file;
 
        
         $data -> save();
-		return redirect()->route('renstra.index')->with('alert-success', 'Data berhasil diubah!');
+		return redirect()->route('lakip.index')->with('alert-success', 'Data berhasil diubah!');
 		
     }
 
