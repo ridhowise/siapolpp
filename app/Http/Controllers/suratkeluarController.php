@@ -72,6 +72,8 @@ class suratkeluarController extends Controller
 		$nama_file = time()."_".$file->getClientOriginalName();
 		$file->move($tujuan_upload,$nama_file);
         
+        $data = new suratkeluar;
+
 		$data->nosurat = $request->nosurat;
         $data->judulsurat = $request->judulsurat;
         $data->tujuan = $request->tujuan;
