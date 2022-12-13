@@ -228,7 +228,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <td> <input value="{{$items->timet}}" name="timet[]" type="hidden"  class="form-control"> </td>                                                                                                        
                                                 <td> <input value="{{$items->timep}}" name="timep[]" type="hidden"  class="form-control"> </td>
                                             <td> <input value="{{$items->date}}" readonly name="date[]" type="date"  class="form-control"> </td>
-                                            <td> <input value="null" name="timetf[]" type="time"  class="form-control"> </td>                                                                                                        
+                                            <td> <input value="07:30:00" name="timetf[]" type="time"  class="form-control"> </td>                                                                                                        
                                             <td> <input value="null" name="timepf[]" type="time"  class="form-control"> </td>
                                             <td>
                                               <select name="status[]" id="status" class="form-control select" required>
