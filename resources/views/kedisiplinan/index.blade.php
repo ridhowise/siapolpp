@@ -232,8 +232,8 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <td> <input value="null" name="timepf[]" type="time"  class="form-control"> </td>
                                             <td>
                                               <select name="status[]" id="status" class="form-control select" required>
-                                                <option value="1">Tidak Finger</option>
                                                 <option value="0">Hadir</option>
+                                                <option value="1">Tidak Finger</option>
                                                 <option value="2">Sakit</option>
                                                 <option value="3">Izin</option>
                                             </select>
