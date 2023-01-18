@@ -10,9 +10,14 @@ class usertahun extends Model
     protected $table = 'usertahun';
     public $timestamps = true;
 
-    public function usertahun()
+    public function user()
     {
-      return $this->hasMany('App\Models\User', 'user_id');
+      return $this->BelongsTo('App\Models\User', 'user_id');
+    }
+
+    public function tahunan()
+    {
+      return $this->BelongsTo('App\Models\tahunan', 'tahun_id');
     }
    
 }
