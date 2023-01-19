@@ -40,8 +40,11 @@
                DUK
             </a>
             <hr class="sidebar-divider"> --}}
-
             <a class="collapse-item " style="color:white" href="{{ url('user') }}">
+                Add User
+            </a>
+
+            <a class="collapse-item " style="color:white" href="{{ url('usertahun') }}">
                 Nominatif PNS
             </a>
   

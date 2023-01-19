@@ -163,13 +163,28 @@
 
                                             </div>
                             </div>
+                            <div class="form-group row"><label class="col-lg-3 form-control-label">Tahun</label>
 
+
+
+                                <div class="col-lg-9">
+                                <select name="tahun_id" id="tahun_id" class="">
+                                    <option>Nomonatif Pegawai </option>
+
+                                    @foreach($tahunan as $tahun)
+                                    <option value="{{ $tahun->id }}"> {{ $tahun->tahun }}</option>
+                                  @endforeach
+
+                                  </select>
+
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col">
                                     <div>
                                         <div class="form-group row">
 
-                                                <label class="col-lg-3 form-control-label">Tanggal </label>
+                                                
 
                                             <div class="col-lg-8">
                                                 <table class="col-lg-12" id="dynamic_field">

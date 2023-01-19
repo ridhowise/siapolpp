@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-
+use App\Models\tahunan;
+use App\Models\usertahun;
 use App\Models\month;
 use App\Models\days;
 use App\Models\disiplin;
@@ -38,8 +39,9 @@ class rekapanController extends Controller
     {
         $data=month::all();
         $days=days::all();
+        $tahunz=tahunan::all();
 
-        return view('rekapan.index',compact('data','days'));
+        return view('rekapan.index',compact('data','days','tahunz'));
     }
 
     /**
@@ -90,24 +92,25 @@ class rekapanController extends Controller
 
         }
 
-        $users=User::all();
+        $tahunan= $request->input('tahunan');
+        $users=usertahun::where('tahun_id',$tahunan)->get();
 
         foreach($users as $user) {
             $disiplin = new disiplin;
             $disiplin->month_id = $data->id;
-            $disiplin->user_id = $user->id;
+            $disiplin->user_id = $user->user->id;
             $disiplin->save();
 
             $produktifitas = new produktifitas;
             $produktifitas->month_id = $data->id;
-            $produktifitas->user_id = $user->id;
+            $produktifitas->user_id = $user->user->id;
             $produktifitas->total = 100;
             $produktifitas->save();
 
             $total = new total;
-            $total->user_id = $user->id;
+            $total->user_id = $user->user->id;
             $total->month_id = $data->id;
-            $total->tpp = $user->salary;
+            $total->tpp = $user->user->salary;
             $total->produktifitas = 100;
             $total->save();
             

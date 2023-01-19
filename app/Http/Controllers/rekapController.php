@@ -84,7 +84,8 @@ class rekapController extends Controller
 
         }
 
-        $users=usertahun::all();
+        $tahunan= $request->input('tahunan');
+        $users=usertahun::where('tahun_id',$tahunan);
 
         foreach($users as $user) {
             $disiplin = new disiplin;

@@ -222,7 +222,22 @@
 
                                             </div>
                             </div>
+                            <div class="form-group row"><label class="col-lg-3 form-control-label">Tahun</label>
 
+
+
+                                <div class="col-lg-9">
+                                <select name="tahunan" id="tahun_id" class="">
+                                    <option>Nomonatif Pegawai </option>
+
+                                    @foreach($tahunz as $tahun)
+                                    <option value="{{ $tahun->id }}"> {{ $tahun->tahun }}</option>
+                                  @endforeach
+
+                                  </select>
+
+                                </div>
+                            </div>
                             <div class="form-group row"><label class="col-lg-3 form-control-label">File </label>
                                 <div class="col-lg-9">
                                   <input type="file" name="file" required>
