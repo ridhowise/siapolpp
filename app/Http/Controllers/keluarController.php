@@ -35,8 +35,7 @@ class keluarController extends Controller
     {
         $data=keluar::all();
         $barangs=persediaan::all();
-        $users=user::where('level_id','<>' ,3)->get();
-
+        $users=user::all();
         return view('keluar.index',compact('data','barangs','users'));
     }
 
