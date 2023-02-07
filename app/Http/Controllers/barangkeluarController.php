@@ -226,7 +226,7 @@ class barangkeluarController extends Controller
         
        
 
-        $pdf_doc = PDF::setOptions(['isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true])->loadView('export_pdf', array('data' => $data,'barangkeluar'=>$barangkeluar,'barangs'=>$barangs,'month'=>$month,'year'=>$year));
+        $pdf_doc = PDF::setOptions(['isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true])->setPaper('8.27x13', 'portrait')->loadView('export_pdf', array('data' => $data,'barangkeluar'=>$barangkeluar,'barangs'=>$barangs,'month'=>$month,'year'=>$year));
 
         return $pdf_doc->download('rekap.pdf');
         // return PDF::setOptions(['isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true])->loadView('reports.invoiceSell')->stream();

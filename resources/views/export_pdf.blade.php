@@ -50,23 +50,23 @@
       {{strtolower($data->user->level->name)}} Satuan Polisi Pamong Praja Kota Bitung 		</td>			
     </table>
 
-    <table class="table" style="margin-top:20px;margin-bottom:150px">
-      <thead style="">
-        <tr>
-          <th>Nama</th>
-          <th>Jumlah</th>
-          <th>Satuan</th>
+    <table class="table table-bordered" style="margin-top:20px;margin-bottom:150px;border-color:black">
+      <thead style="border: 1px solid black;">
+        <tr style="border: 1px solid black;">
+          <th style="border: 1px solid black;">Nama</th>
+          <th style="border: 1px solid black;">Jumlah</th>
+          <th style="border: 1px solid black;">Satuan</th>
 
         </tr>
       </thead>
       
-      <tbody>
+      <tbody style="border: 1px solid black;">
        
      @foreach($barangkeluar as $key => $items)
             <tr>
-            <td>{{ $items->barang->nama }} </td>
-            <td>{{ $items->keluar }} </td>
-            <td>{{ $items->barang->satuan }} </td>
+            <td style="border: 1px solid black;">{{ $items->barang->nama }} </td>
+            <td style="border: 1px solid black;">{{ $items->keluar }} </td>
+            <td style="border: 1px solid black;">{{ $items->barang->satuan }} </td>
            
 
 
