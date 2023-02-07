@@ -46,11 +46,11 @@
         
       </tr>
       <tr>
-        <td> Pada tanggal {{Riskihajar\Terbilang\Facades\Terbilang::date($data->tanggal)}} pengurus barang telah menyerahkan barang berupa alat tulis kantor untuk keperluan kegiatan Pelayanan Administrasi Perkantoran pada 
+        <td style="font-size:12px"> Pada tanggal {{Riskihajar\Terbilang\Facades\Terbilang::date($data->tanggal)}} pengurus barang telah menyerahkan barang berupa alat tulis kantor untuk keperluan kegiatan Pelayanan Administrasi Perkantoran pada 
       {{strtolower($data->user->level->name)}} Satuan Polisi Pamong Praja Kota Bitung 		</td>			
     </table>
 
-    <table class="table table-bordered" style="margin-top:20px;margin-bottom:150px;border-color:black">
+    <table class="table table-bordered" style="margin-top:20px;margin-bottom:30px;border-color:black;font-size:10px">
       <thead style="border: 1px solid black;">
         <tr style="border: 1px solid black;">
           <th style="border: 1px solid black;">Nama</th>
@@ -79,8 +79,11 @@
     {{-- <span class="right">Yang menyerahkan<br><b>PENGURUS BARANG</b><br><br><br><br><b>RONNY TUMIWA</b><br><b>NIP. 19750615 200604 1 017</b>
     </span><span class="left">Yang menerima,<br><b>{{strtoupper($data->user->level->name)}}</b><br><br><br><b>{{strtoupper($data->user->name)}}</b><br><b>{{$data->user->nip}}</b></span> --}}
 
-    <div class="float-left" style="text-align:center">Yang menyerahkan, <br><b>BENDAHARA BARANG,</b><br><br><br><br><br><br><br><b>RONNY TUMIWA</b><br><b>NIP. 19750615 200604 1 017</b></div>
-    <div class="float-right" style="text-align:center;width:220px">Yang menerima, <br><b>{{strtoupper($data->user->level->name)}}</b><br><br><br><br><br><b>{{strtoupper($data->user->name)}}</b><br><b>{{$data->user->nip}}</b></div><br>
-</body>
+    <div class="float-left" style="text-align:center;font-size:11px;margin-left:110px">Yang menyerahkan, <br><b>BENDAHARA BARANG,</b><br><br><br><br><br><b>RONNY TUMIWA</b><br><b>NIP. 19750615 200604 1 017</b></div>
+    <div class="float-right" style="text-align:center;font-size:11px;width:220px;margin-right:60px">Yang menerima, <br><b>{{strtoupper($data->user->level->name)}}</b><br><br><br><br><br><b>{{strtoupper($data->user->name)}}</b><br><b>NIP. {{$data->user->nip}}</b></div><br>
+    <br>
+    <div  style="text-align:center;font-size:11px;margin-top:100px"><br><b>KEPALA SATUAN</b><br><br><br><br><br><b>STEVEN V. SULUH, SSTP,M SI</b><br><b>NIP. 197709271996121001</b></div><br>
+
+  </body>
 
 </html>

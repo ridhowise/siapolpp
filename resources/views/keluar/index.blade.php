@@ -78,6 +78,7 @@
                                     href="#"> Ditolak</a></td>
                                
                                         @endif
+                                        <td>
                                         <form action="{{ route('keluar.destroy', $items->id) }}" method="post">
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
