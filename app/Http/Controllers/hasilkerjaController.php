@@ -63,7 +63,7 @@ class hasilkerjaController extends Controller
         // $user=disiplin::where([
         //     ['month_id', '=', $id],
         //     ['total', '=', null],
-        // ])->get()->all();
+    
        
        
        
