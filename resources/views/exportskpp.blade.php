@@ -102,7 +102,7 @@ html *
 
 <div class="page-break"></div>
   <div style="text-align:center;margin-top:10pxpx">
-  <img src="https://i.ibb.co/1RsZts2/782px-Garuda-Pancasila-Coat-of-Arms-of-Indonesia-svg.png" style="width:50px;text-align:center">
+  <img src="https://i.ibb.co/1RsZts2/pancasila.png" style="width:50px;text-align:center">
   </div>
   <h6 style="text-align:center;margin-top:10px">DOKUMEN EVALUASI KINERJA PEGAWAI</h6>
   <h6 style="text-align:center">PERIODE : AKHIR</h6>
