@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
-
+use Carbon\Carbon;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -27,6 +27,8 @@ class AppServiceProvider extends ServiceProvider
     {
         Blade::directive('currency', function ( $expression ) { return "<?php echo number_format($expression,0,',','.'); ?>"; });
 
+        config(['app.locale' => 'id']);
+        Carbon::setLocale('id');
 
         // if (env('APP_ENV') !== 'local') {
         //     \Illuminate\Support\Facades\URL::forceScheme('https');

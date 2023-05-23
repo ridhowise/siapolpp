@@ -236,6 +236,24 @@
                 
                                                 </div>
                                             </div>
+
+                                            <div class="form-group row"><label class="col-lg-3 form-control-label">Atasan Langsung</label>
+
+
+
+                                                <div class="col-lg-9">
+                                                <select name="atasan_id" id="atasan_id" onchange="yesnoCheck(this);" class="form-control{{ $errors->has('user_id') ? ' is-invalid' : '' }}">
+                                                    <option value="{{$data->atasan->id}}">{{$data->atasan->name}}</option>
+                                                    <option value="">----</option>
+                
+                                                    @foreach($levels as $level)
+                                                    <option value="{{ $level->id }}"> {{ $level->name }}</option>
+                                                  @endforeach
+                
+                                                  </select>
+                
+                                                </div>
+                                            </div>
                                             <div class="form-group row"><label class="col-lg-3 form-control-label">Foto</label>
 
                                                 <div class="col-lg-9">

@@ -8,14 +8,14 @@
 
         <!-- Page Heading -->
 
-            <h1 class="h3 mb-2 text-gray-800">Rekapan Bulanan <a href="{{ url('rekapan/create') }}" class="btn btn-sm btn-primary"
+            <h1 class="h3 mb-2 text-gray-800">SKP <a href="{{ url('skp/create') }}" class="btn btn-sm btn-primary"
                     data-toggle="modal" data-target="#adds">Create </a>
             </h1>
        
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">rekapan Bulanan</h6>
+                <h6 class="m-0 font-weight-bold text-primary">SKP</h6>
             </div>
             <div class="card-body">
 
@@ -33,13 +33,11 @@
                             <thead style="">
                                 <tr>
                                     <th>Periode</th>
-                                    <th>Daftar Hari Kerja</th>
-                                    <th>Rekap Finger</th>
-                                    <th>Kedisiplinan</th>
-                                    <th>Produktifitas</th>
+                                    <th>Nama</th>
+                                    <th>Hasil Kerja</th>
+                                    <th>Perilaku Kerja</th>
                                     <th>Total</th>
-                                    <th>Status</th>
-                                    <th>Action</th>
+                                    <th>Action </th>
 
                                 </tr>
                             </thead>
@@ -47,86 +45,28 @@
                             <tbody>
 
                                 @foreach ($data as $key => $items)
-                                    <td>{{ $items->awal }} - {{$items->akhir}} </td>
+                                    <td>1 JANUARI {{ $items->tahun }} - 31 DESEMBER {{$items->tahun}} </td>
                                    
-                                    <td><a class="btn-sm btn-info" type="submit"
-                                        href="days/{{ $items->id }}"><i class="fas fa-eye"></i> Lihat Detail</a></td>
-                                        @if($items->file == null)
-                                        <td></td>
-                                        @else
-                                        <td> <a href="{{ url('data_file') }}/{{ $items->file }}"
-                                          download="{{ $items->file }}">
-                                          <button type="button" class="btn-sm btn-success">
-                                           <i class="glyphicon glyphicon-download">
-                                            Download
-                                            </i>
-                                          </button>
-                                          </a></td>
-                                          @endif
+                                    <td> {{ $items->user->name }}</td>
                                     <td><a class="btn btn-sm btn-primary" type="submit"
-                                        href="kedisiplinan/{{ $items->id }}"><i class="fas fa-arrow-right"></i> Input kedisiplinan</a></td>
+                                        href="hasilkerja/{{ $items->id }}"><i class="fas fa-arrow-right"></i> Hasil Kerja</a></td>
                                         <td><a class="btn btn-sm btn-primary" type="submit"
-                                            href="produktifitas/{{ $items->id }}"><i class="fas fa-arrow-right"></i> Input Produktifitas</a></td>
+                                            href="perilakukerja/{{ $items->id }}"><i class="fas fa-arrow-right"></i> Perilaku Kerja</a></td>
                                         </td>
                                         <td><a class="btn btn-sm btn-success" type="submit"
-                                            href="total/{{ $items->id }}"><i class="fas fa-arrow-right"></i> Total</a> </td>
-                                        @if($items->status == 0 and Auth::User()->level_id == '2' )
-                                        <td><a class="btn btn-sm btn-secondary" type="submit"
-                                            href="total/{{ $items->id }}"><i class="fas fa-spinner fa-spin"></i> Belum selesai</a>
-                                            <a class="btn btn-sm btn-warning" href="/totalpreview/create-pdf/{{$items->id}}">Preview Total <i class="fas fa-arrow-down"></i></a>
-
-                                        </td> 
-                                       
-                                        @elseif($items->status == 0 and Auth::User()->level_id != '2' )
-                                        <td><a class="btn btn-sm btn-secondary" type="submit"
-                                            href="total/{{ $items->id }}"><i class="fas fa-spinner fa-spin"></i> Belum selesai</a>
-                                            <a class="btn btn-sm btn-warning" href="/totalpreview/create-pdf/{{$items->id}}">Preview Total <i class="fas fa-arrow-down"></i></a>
-                                        </td> 
-                                       
-                                        @elseif($items->status == 1 and Auth::User()->level_id == '2'  )
-                                        <td><a class="btn btn-sm btn-warning" type="submit"
-                                            href="total/{{ $items->id }}"><i class="fas fa-spinner fa-spin"></i> Checker </a><a class="btn btn-sm btn-warning" href="/total/create-pdf/{{$items->id}}"><i class="fas fa-arrow-down"></i> Download</a>
-                                        </td>   
-                                        @elseif($items->status == 1 and Auth::User()->level_id != '2' )
-                                        <td><a class="btn btn-sm btn-secondary" type="submit"
-                                            href="#"><i class="fas fa-spinner fa-spin"></i> Proses Checker</a>
-                                            <a class="btn btn-sm btn-warning" href="/totalpreview/create-pdf/{{$items->id}}">Preview Total<i class="fas fa-arrow-down"></i></a>
-                                        </td>
-
-                                            @elseif($items->status == 2 and Auth::User()->level_id == '1'   )
-                                            <td><a class="btn btn-sm btn-warning" type="submit"
-                                                href="total/{{ $items->id }}"><i class="fas fa-spinner fa-spin"></i> Approvement</a><a class="btn btn-sm btn-warning" href="/total/create-pdf/{{$items->id}}"><i class="fas fa-arrow-down"></i> Download</a>
-                                            </td>   
-                                            @elseif($items->status == 2 and Auth::User()->level_id != '1' )
-                                            <td><a class="btn btn-sm btn-secondary" type="submit"
-                                                href="#"><i class="fas fa-spinner fa-spin"></i> Proses Approvement</a>
-                                                <a class="btn btn-warning" href="/totalpreview/create-pdf/{{$items->id}}">preview<i class="fas fa-arrow-down"></i></a>
-                                            </td>
-
-                                    
-                                    @elseif($items->status == 3 and Auth::User()->level_id == '1' )
-                                    <td><a class="btn btn-warning" href="/total/create-pdf/{{$items->id}}">Download<i class="fas fa-arrow-down"></i></a>
-                                    </td>
-
-                                    
-                                        @elseif($items->status == 3 and Auth::User()->level_id != '1' )
-                                        <td><a class="btn btn-warning" href="/total/create-pdf/{{$items->id}}">Download<i class="fas fa-arrow-down"></i></a></td>
-
-                                   
-                                    @endif
-                                                                               
+                                            href="hasilskp/{{$items->id}}"><i class="fas fa-arrow-right"></i> Hasil SKP</a> </td>
+                                        
                                             <td>
-
-                                                
                                                    
-
-                                        <form action="{{ route('rekapan.destroy', $items->id) }}" method="post">
+                                                <a class="btn btn-warning" href="/hasilskp/create-pdf/{{$items->id}}"> 1 <i class="fas fa-arrow-down"></i></a>
+                                                <a class="btn btn-warning" href="/hasilskp/createe-pdf/{{$items->id}}"> 2 <i class="fas fa-arrow-down"></i></a>
+                                        <form action="{{ route('skp.destroy', $items->id) }}" method="post">
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
                                             {{-- <a href="{{ route('masuk.show',$items->id) }}">Show</a> --}}
 
 
-                                                <button class="btn btn-sm btn-danger" type="submit"
+                                                <button class="btn btn-danger" type="submit"
                                                     onclick="return confirm('Yakin ingin menghapus data?')">Delete</button>
                                         </form>
                                     </td>
@@ -200,77 +140,37 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <form id="upload-image-form" class="form-horizontal" action="{{ route('rekapan.store') }}" method="post"
+                    <form id="upload-image-form" class="form-horizontal" action="{{ route('skp.store') }}" method="post"
                         enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <div class="modal-body">
 
-                            <div class="form-group row"><label class="col-lg-3 form-control-label">Periode</label>
 
-                                <div class="col-lg-8">
-                                                <table class="col-lg-12" >
-                                                    <tr>
-
-                                                       
-                                                        <td> <input value="" name="awal" type="date"  class="form-control"> </td>                                                                                                        
-                                                        <td> <input value="" name="akhir" type="date"  class="form-control"> </td>                                                        
-                                                   
-
-                                                    </tr>
-                                                </table>
-
-
-                                            </div>
-                            </div>
-                            <div class="form-group row"><label class="col-lg-3 form-control-label">Tahun</label>
+                            <div class="form-group row"><label class="col-lg-3 form-control-label">Nama </label>
 
 
 
                                 <div class="col-lg-9">
-                                <select name="tahunan" id="tahun_id" class="">
-                                    <option>Nominatif Pegawai </option>
+                                <select name="user_id" id="user_id" class="">
+                                    <option>Nama Pegawai </option>
 
-                                    @foreach($tahunz as $tahun)
-                                    <option value="{{ $tahun->id }}"> {{ $tahun->tahun }}</option>
+                                    @foreach($users as $user)
+                                    <option value="{{ $user->id }}"> {{ $user->name }}</option>
                                   @endforeach
 
                                   </select>
 
                                 </div>
                             </div>
-                            <div class="form-group row"><label class="col-lg-3 form-control-label">File </label>
+                            
+
+                            
+                            <div class="form-group row"><label class="col-lg-3 form-control-label">Tahun </label>
                                 <div class="col-lg-9">
-                                  <input type="file" name="file" required>
+                                    <input name="tahun" id="tahun" type="number" min="2020" max="2099" step="1" value="2022" />
                                 </div>
                               </div>
-
-                            <div class="row">
-                                <div class="col">
-                                    <div>
-                                        <div class="form-group row">
-
-                                                <label class="col-lg-3 form-control-label">Tanggal </label>
-
-                                            <div class="col-lg-8">
-                                                <table class="col-lg-12" id="dynamic_field">
-                                                    <tr>
-
-                                                       
-                                                        <td> <input value="" name="date[]" type="date"  class="form-control"> </td>
-                                                        <td> <input value="08:00" name="timet[]" type="time"  class="form-control"> </td>                                                                                                        
-                                                        <td> <input value="17:00" name="timep[]" type="time"  class="form-control"> </td>                                                        
-                                                   
-
-                                                        <td><button type="button" name="add" id="add"
-                                                                class="btn btn-success">+</button></td>
-                                                    </tr>
-                                                </table>
-
-
-                                            </div>
-
-                                        </div>
-
+                              
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary"
                                                 data-dismiss="modal">Close</button>
@@ -369,7 +269,7 @@
 
         function showEdit(id) {
             $.ajax({
-                url: "{{ url('rekapan') }}/" + id + "/edit",
+                url: "{{ url('skp') }}/" + id + "/edit",
                 success: function(res) {
                     $("#form-edit [name='id']").val(id);
                     $("#form-edit [name='types']").val(res.data.types);
@@ -378,7 +278,7 @@
                     $("#form-edit [name='soal']").val(res.data.soal);
 
 
-                    $('#form-edit').attr('action', "./rekapan/" + id);
+                    $('#form-edit').attr('action', "./skp/" + id);
                     $("#edit").modal('show');
                 }
             })

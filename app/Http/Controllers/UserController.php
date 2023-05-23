@@ -53,6 +53,7 @@ class UserController extends Controller
           
             $simpan=new User;
 		    $simpan->level_id = $req->input('level_id');
+            $simpan->atasan_id = $req->input('atasan_id');
             $simpan->name = $req -> input('name');
             $simpan->email = $req ->input('email');
             $simpan->nip = $req ->input('nip');
@@ -125,6 +126,7 @@ class UserController extends Controller
           $data->gender = $request->gender;
           $data->salary = $request->salary;
           $data->level_id = $request->level_id;
+          $data->atasan_id = $request->atasan_id;
           $data->save();
         return redirect()->route('user.index')->with('alert-success', 'Berhasil Update Data!');
     }

@@ -51,6 +51,7 @@ Route::post('/score/{id}', 'scoreController@store')->name('store')->middleware('
 Route::get('/rekap/{id}', 'rekapController@index')->name('rekap')->middleware('auth');
 
 Route::resource('rekapan', 'rekapanController')->middleware('auth');
+Route::resource('skp', 'skpController')->middleware('auth');
 
 Route::resource('level', 'LevelController')->middleware('auth');
 Route::resource('user', 'UserController')->middleware('auth');
@@ -128,7 +129,20 @@ Route::get('/total/create-pdf/{id}', 'totalController@exportPDF')->name('exportP
 Route::get('/totalpreview/create-pdf/{id}', 'totalController@exportPDFF')->name('exportPDFF')->middleware('auth');
 Route::get('/kedisiplinan/create-pdf/{id}', 'kedisiplinanController@exportPDF')->name('exportPDF')->middleware('auth');
 
+Route::get('/hasilkerja/{id}', 'hasilkerjaController@index')->name('hasilkerja')->middleware('auth');
+Route::post('/hasilkerja/{id}', 'hasilkerjaController@store')->name('store')->middleware('auth');
+Route::get('/hasilkerja/create-pdf/{id}', 'hasilkerjaController@exportPDF')->name('exportPDF')->middleware('auth');
+
+Route::get('/perilakukerja/{id}', 'perilakukerjaController@index')->name('perilakukerja')->middleware('auth');
+Route::post('/perilakukerja/{id}', 'perilakukerjaController@store')->name('store')->middleware('auth');
+Route::get('/perilakukerja/create-pdf/{id}', 'perilakukerjaController@exportPDF')->name('exportPDF')->middleware('auth');
+
 Route::get('/maintenance', 'maintenanceController@index')->name('maintenance')->middleware('auth');
+
+Route::get('/hasilskp/{id}', 'hasilskpController@index')->name('hasilskp')->middleware('auth');
+Route::post('/hasilskp/{id}', 'hasilskpController@store')->name('store')->middleware('auth');
+Route::get('/hasilskp/create-pdf/{id}', 'hasilskpController@exportskp')->name('exportskp')->middleware('auth');
+Route::get('/hasilskp/createe-pdf/{id}', 'hasilskpController@exportskpp')->name('exportskpp')->middleware('auth');
 
 Route::get('password/change', 'Auth\AuthController@changePassword');
 Route::post('password/change', 'Auth\AuthController@postChangePassword');

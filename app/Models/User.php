@@ -32,6 +32,10 @@ class User extends Authenticatable
         return $this->belongsTo(Level::class,'level_id');
     }
 
+    public function atasan(){
+        return $this->belongsTo(Level::class,'atasan_id');
+    }
+
     public function punyaLevel($level){
         // dd($this->Level);
         if($this->Level->level==$level){
