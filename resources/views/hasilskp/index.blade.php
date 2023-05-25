@@ -225,9 +225,9 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
 
                 <select name="organisasi" id="organisasi" class="">
                     <option>Penilaian</option>
-                    <option value="SANGAT BAIK">SANGAT BAIK</option>
+                    <option value="SANGAT BAIK">ISTIMEWA</option>
                     <option value="BAIK">BAIK</option>
-                    <option value="BUTUH PERBAIKAN">BUTUH PERBAIKAN</option>
+                    <option value="BUTUH PERBAIKAN">CUKUP</option>
                     <option value="KURANG">KURANG</option>
                     <option value="SANGAT KURANG">SANGAT KURANG</option>
 
