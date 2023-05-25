@@ -54,7 +54,7 @@ class hasilkerjaController extends Controller
         $skpnya = $skp->id;
         $rencana = rencana::where('skp_id',$skpnya)->first();
         $rencananya = $rencana->id;
-        $intervensi = indikator::where('rencana_id',$skpnya)->get();
+        $intervensi = indikator::where('rencana_id',$rencananya)->get();
 
 
         // $datai=indikator::where('rencana_id',$dataz->id)->get();

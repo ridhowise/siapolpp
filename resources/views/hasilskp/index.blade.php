@@ -71,6 +71,7 @@
             <tr>
               <th>Organisasi</th>
               <th>Pegawai</th>
+              <th>Rating</th>
               <th>Grafik</th>
               <th>Dukungan Sumber Daya</th>
               <th>Skema Pertanggung Jawaban</th>
@@ -86,6 +87,7 @@
               <tr>
               <td rowspan="2">{{$items->organisasi}}</td> 
               <td rowspan="2">{{$items->pegawai}}</td> 
+              <td rowspan="2">{{$items->rating}}</td> 
               <td rowspan="2">
                 <div id="curve_chart" style="width: 450px; height: 250px"></div>
               </td>
@@ -233,12 +235,31 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
 
                 </div>
             </div>
-            
-            <div class="form-group row">
+          </div>
+         
+            <div class="modal-body">
+              <div class="form-group row"><label class="col-lg-2 form-control-label">Rating</label>
 
-              <label class="col-lg-2 form-control-label">Dukungan Sumber Daya </label>
+                <div class="col-lg-3">
 
-            <div class="col-lg-8"> 
+                <select name="rating" id="rating" class="">
+                    <option>Penilaian</option>
+                    <option value="DIATAS EKSPETASI">DIATAS EKSPETASI</option>
+                    <option value="SESUAI EKSPETASI">SESUAI EKSPETASI</option>
+                    <option value="DIBAWAH EKSPETASI">DIBAWAH EKSPETASI</option>
+
+                  </select>
+
+                </div>
+            </div>
+          </div>
+
+           
+
+              <div class="modal-body">
+                <div class="form-group row"><label class="col-lg-2 form-control-label">Organisasi</label>
+  
+                  <div class="col-lg-8">
 
             
               
@@ -259,15 +280,14 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
 
 
             </div>
-
         </div>
+      </div>
+     
+       
+      <div class="modal-body">
+        <div class="form-group row"><label class="col-lg-2 form-control-label">Skema</label>
 
-        <div class="form-group row">
-
-          <label class="col-lg-2 form-control-label">Dukungan Sumber Daya </label>
-
-        <div class="col-lg-8"> 
-
+          <div class="col-lg-8">
         
           
           
@@ -289,12 +309,12 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
         </div>
 
     </div>
+  </div>
 
-    <div class="form-group row">
+    <div class="modal-body">
+      <div class="form-group row"><label class="col-lg-2 form-control-label">Konsekuensi</label>
 
-      <label class="col-lg-2 form-control-label">Konsekuensi </label>
-
-    <div class="col-lg-8"> 
+        <div class="col-lg-8">
 
     
       
@@ -318,7 +338,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
 
 </div>
         
-            
+</div>       
               
             
                             <div class="modal-footer">

@@ -606,7 +606,7 @@ html *
           
       <tr>
         <td colspan="8" style="background-color:#b8cce4;border: 1px solid black;font-size:11px;padding:1px"><b>RATING HASIL KERJA :
-               {{-- <br> {{$rating}}</b> --}}<br> <b>DIATAS EKSPETASI</b>
+               <br><b> {{$rating}}</b> 
         </td>
       </tr>
 
@@ -754,7 +754,7 @@ html *
 
       <tr>
         <td colspan="8" style="background-color:#b8cce4;border: 1px solid black;font-size:11px;padding:1px"><b>RATING PERILAKU KERJA KERJA :
-               {{-- <br> {{$rating}}</b> --}}<br> <b>DIATAS EKSPETASI</b>
+               <br> <b>{{$rating}}</b>
         </td>
       </tr>
       <tr>

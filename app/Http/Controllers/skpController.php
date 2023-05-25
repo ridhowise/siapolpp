@@ -42,8 +42,8 @@ class skpController extends Controller
 	 
     public function index()
     {
-        $data=skp::all();
-        $users=User::all();
+        $data=skp::where('user_id', '!=' ,'39')->get();
+        $users=User::all()->except(39);
         
 
 

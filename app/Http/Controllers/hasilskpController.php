@@ -109,6 +109,7 @@ class hasilskpController extends Controller
         $dataz=hasilskp::where('skp_id',$id)->first();
         $dataz->organisasi = $request->input('organisasi');
         $dataz->pegawai = $request->input('pegawai');
+        $dataz->rating = $request->input('rating');
         $dataz->save();
 
         $dukungans= $request->input('dukungan');
@@ -331,7 +332,7 @@ class hasilskpController extends Controller
         $atasans = $atasann->name;
 
         $superatasan=$atasann->atasan->id;
-        $superatasann = user::where('id',$superatasan)->first();
+        $superatasann = user::where('level_id',$superatasan)->first();
         $superatasans = $superatasann->name;
 
         $dataz=rencana::where('skp_id',$id)->get();
