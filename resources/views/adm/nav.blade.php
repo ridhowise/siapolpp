@@ -67,7 +67,7 @@
             <hr class="sidebar-divider">
 
             <a class="collapse-item " style="color:white" href="{{ url('skp') }}">
-                Indeks
+                SKP
             </a>
 
             {{-- <a class="collapse-item " style="color:white" href="{{ url('maintenance') }}">
