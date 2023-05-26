@@ -610,7 +610,11 @@ html *
                <br><b> {{$rating}}</b> 
         </td>
       </tr>
-
+    </tbody>
+  </table>
+  <div class="page-break"></div>
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" style="font-size:10px;margin-bottom:0" >
+        <tbody style="color:black">
     
       <tr>
         <td colspan="5"  style="background-color:#b8cce4;border: 1px solid black;font-size:11px;padding:1px"><b>PERILAKU KERJA </b></td>
@@ -634,11 +638,7 @@ html *
       
       </tr>
 
-    </tbody>
-  </table>
-  <div class="page-break"></div>
-      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" style="font-size:10px;margin-bottom:0" >
-        <tbody style="color:black">
+    
 
       <tr>
         <td rowspan="3" style="font-size:11px; border: 1px solid black;padding:4px;text-align:center;">2</td>
