@@ -184,7 +184,7 @@
 <div class="modal fade bd-example-modal-lg" id="add" tabindex="-1" role="dialog"
 aria-labelledby="exampleModalLabel" aria-hidden="true">
 <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content" style="border:1px solid black;">
+    <div class="modal-content" style="border:1px solid black; width:130%">
         <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Create</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">

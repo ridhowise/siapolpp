@@ -49,8 +49,10 @@ class hasilkerjaController extends Controller
 
         $atasan=$data->user->atasan->id;
         $atasans=$data->user->atasan->name;
+        $atasanw=user::where('level_id',$atasan)->first();
+        $atasanwid=$atasanw->id;
 
-        $skp = skp::where('user_id',$atasan)->first();
+        $skp = skp::where('user_id',$atasanwid)->first();
         $skpnya = $skp->id;
         $rencana = rencana::where('skp_id',$skpnya)->first();
         $rencananya = $rencana->id;
