@@ -65,11 +65,11 @@ html *
           <td colspan="3" style="background-color:#b8cce4;text-align:center;border: 1px solid black;padding:1px"><b>PEJABAT PENILAI KINERJA</b></td>
         </tr>
         <tr>
-            <td style="font-size:11px; border: 1px solid black;padding:1px;text-align:center;">1</td>
-            <td style="font-size:11px; border: 1px solid black;padding:1px">Nama</td>
+            <td style="font-size:11px; border: 1px solid black;padding:1px;text-align:center;width:3%">1</td>
+            <td style="font-size:11px; border: 1px solid black;padding:1px;width:20%">Nama</td>
             <td style="font-size:11px; border: 1px solid black;padding:1px" >{{$skp->user->name}}</td>
-            <td style="font-size:11px; border: 1px solid black;padding:1px;text-align:center;">1</td>
-            <td style="font-size:11px; border: 1px solid black;padding:1px">Nama</td>
+            <td style="font-size:11px; border: 1px solid black;padding:1px;text-align:center;width:5%">1</td>
+            <td style="font-size:11px; border: 1px solid black;padding:1px;width:20%">Nama</td>
             <td style="font-size:11px; border: 1px solid black;padding:1px">{{$atasans}}</td>
         </tr>
         <tr>
