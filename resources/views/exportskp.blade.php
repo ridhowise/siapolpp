@@ -506,7 +506,7 @@ html *
             <td style="font-size:11px; border: 1px solid black;padding:1px">{{$items->indikator}}</td> 
             <td style="font-size:11px; border: 1px solid black;padding:1px">{{$items->target}}</td> 
             <td style="font-size:11px; border: 1px solid black;padding:1px">{{$items->realisasi}}</td> 
-            <td style="font-size:11px; border: 1px solid black;padding:1px"><img style="width:20px"src="https://i.ibb.co/1GWnwCw/Screenshot-28.png" alt="">{{$items->umpan}}</td> 
+            <td style="font-size:11px; border: 1px solid black;padding:1px"><img style="margin-top:5px;width:25px;border-radius:50%"src="https://i.ibb.co/1GWnwCw/Screenshot-28.png" alt="">{{$items->umpan}}</td> 
 
             </tr>
 
