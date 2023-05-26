@@ -249,7 +249,7 @@ class hasilskpController extends Controller
     public function exportskp($id) {
         $skp = skp::findorFail($id);
         $atasan=$skp->user->atasan->id;
-        $atasann = user::where('id',$atasan)->first();
+        $atasann = user::where('level_id',$atasan)->first();
         $atasans = $atasann->name;
 
        
@@ -328,7 +328,7 @@ class hasilskpController extends Controller
     public function exportskpp($id) {
         $skp = skp::findorFail($id);
         $atasan=$skp->user->atasan->id;
-        $atasann = user::where('id',$atasan)->first();
+        $atasann = user::where('level_id',$atasan)->first();
         $atasans = $atasann->name;
 
         $superatasan=$atasann->atasan->id;

@@ -183,70 +183,90 @@ html *
               <td style="font-size:12px; border: 1px solid black;padding:3px" >Satuan Polisi Pamong Praja</td>
             </tr>
           
+           
+
+            @if($skp->user->level->id == 1)
             <tr>
-              <td rowspan="6" style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;width:5%;background-color:#b8cce4">3</td>
+              <td rowspan="3" style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;width:5%;background-color:#b8cce4">3</td>
               <td colspan="3" style="background-color:#b8cce4;border: 1px solid black;padding:1px;font-size:12px"><b>ATASAN PEJABAT PENILAI KINERJA</b></td>
             </tr>
-            
               <tr>
                 <td style="font-size:12px; border: 1px solid black;padding:3px;">NAMA</td>
                 <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;width:2%">:</td>
-                <td style="font-size:12px; border: 1px solid black;padding:3px" >{{$superatasans}}</td>
+                <td style="font-size:12px; border: 1px solid black;padding:3px" >Ir. MAURITS MANTIRI, M.M</td>
               </tr>
-              <tr>
-                <td style="font-size:12px; border: 1px solid black;padding:3px;">NIP</td>
-                <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;width:2%">:</td>
-                <td style="font-size:12px; border: 1px solid black;padding:3px" >{{$superatasann->nip}}</td>
-              </tr>
-              <tr>
-                <td style="font-size:12px; border: 1px solid black;padding:3px;">PANGKAT / GOL RUANG</td>
-                <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;width:2%">:</td>
-                <td style="font-size:12px; border: 1px solid black;padding:3px" >{{$superatasann->golongan->name}}</td>
-              </tr>
+    
               <tr>
                 <td style="font-size:12px; border: 1px solid black;padding:3px;">JABATAN</td>
                 <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;width:2%">:</td>
-                <td style="font-size:12px; border: 1px solid black;padding:3px" >{{$superatasann->level->name}}</td>
+                <td style="font-size:12px; border: 1px solid black;padding:3px" >Wali Kota Bitung</td>
               </tr>
-              @if($superatasann->id == 39)
-              <tr>
-                <td style="font-size:12px; border: 1px solid black;padding:3px;">UNIT KERJA</td>
-                <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;width:2%">:</td>
-                <td style="font-size:12px; border: 1px solid black;padding:3px" >Sekretariat Daerah Kota Bitung</td>
-              </tr>
-              @else
-              <tr>
-                <td style="font-size:12px; border: 1px solid black;padding:3px;">UNIT KERJA</td>
-                <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;width:2%">:</td>
-                <td style="font-size:12px; border: 1px solid black;padding:3px" >Satuan Polisi Pamong Praja</td>
-              </tr>
-              @endif
 
-              <tr>
-                <td rowspan="3" style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;width:5%;background-color:#b8cce4">4</td>
-                <td colspan="3" style="background-color:#b8cce4;border: 1px solid black;padding:1px;font-size:12px"><b>ATASAN PEJABAT PENILAI KINERJA</b></td>
-              </tr>
-              
+                @else
                 <tr>
-                  <td style="font-size:12px; border: 1px solid black;padding:3px;">CAPAIAN KINERJA ORGANISASI</td>
-                  <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;width:2%">:</td>
-                  <td style="font-size:12px; border: 1px solid black;padding:3px" ><b>{{$pegawai}}</b></td>
+                  <td rowspan="6" style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;width:5%;background-color:#b8cce4">3</td>
+                  <td colspan="3" style="background-color:#b8cce4;border: 1px solid black;padding:1px;font-size:12px"><b>ATASAN PEJABAT PENILAI KINERJA</b></td>
                 </tr>
                 <tr>
-                  <td style="font-size:12px; border: 1px solid black;padding:3px;">CAPAIAN KINERJA PEGAWAI</td>
+                  <td style="font-size:12px; border: 1px solid black;padding:3px;">NAMA</td>
                   <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;width:2%">:</td>
-                  <td style="font-size:12px; border: 1px solid black;padding:3px" ><b>{{$organisasi}}</b></td>
+                  <td style="font-size:12px; border: 1px solid black;padding:3px" >{{$superatasans}}</td>
                 </tr>
+                <tr>
+                  <td style="font-size:12px; border: 1px solid black;padding:3px;">NIP</td>
+                  <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;width:2%">:</td>
+                  <td style="font-size:12px; border: 1px solid black;padding:3px" >{{$superatasann->nip}}</td>
+                </tr>
+                <tr>
+                  <td style="font-size:12px; border: 1px solid black;padding:3px;">PANGKAT / GOL RUANG</td>
+                  <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;width:2%">:</td>
+                  <td style="font-size:12px; border: 1px solid black;padding:3px" >{{$superatasann->golongan->name}}</td>
+                </tr>
+                <tr>
+                  <td style="font-size:12px; border: 1px solid black;padding:3px;">JABATAN</td>
+                  <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;width:2%">:</td>
+                  <td style="font-size:12px; border: 1px solid black;padding:3px" >{{$superatasann->level->name}}</td>
+                </tr>
+                @if($superatasann->id == 39)
+                <tr>
+                  <td style="font-size:12px; border: 1px solid black;padding:3px;">UNIT KERJA</td>
+                  <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;width:2%">:</td>
+                  <td style="font-size:12px; border: 1px solid black;padding:3px" >Sekretariat Daerah Kota Bitung</td>
+                </tr>
+                @else
+                <tr>
+                  <td style="font-size:12px; border: 1px solid black;padding:3px;">UNIT KERJA</td>
+                  <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;width:2%">:</td>
+                  <td style="font-size:12px; border: 1px solid black;padding:3px" >Satuan Polisi Pamong Praja</td>
+                </tr>
+                @endif
+                @endif
 
                 <tr>
-                  <td rowspan="2" style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;width:5%;background-color:#b8cce4">5</td>
-                  <td colspan="3" style="background-color:#b8cce4;border: 1px solid black;padding:1px;font-size:12px"><b>CATATAN/ REKOMENDASI</b></td>
+                  <td rowspan="3" style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;width:5%;background-color:#b8cce4">4</td>
+                  <td colspan="3" style="background-color:#b8cce4;border: 1px solid black;padding:1px;font-size:12px"><b>EVALUASI KINERJA</b></td>
                 </tr>
-                <tr>
-                  <td colspan="3" style="font-size:12px; border: 1px solid black;padding:3px;">-</td>
-                  
-                </tr>
-               
+                
+                  <tr>
+                    <td style="font-size:12px; border: 1px solid black;padding:3px;">CAPAIAN KINERJA ORGANISASI</td>
+                    <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;width:2%">:</td>
+                    <td style="font-size:12px; border: 1px solid black;padding:3px" ><b>{{$pegawai}}</b></td>
+                  </tr>
+                  <tr>
+                    <td style="font-size:12px; border: 1px solid black;padding:3px;">CAPAIAN KINERJA PEGAWAI</td>
+                    <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;width:2%">:</td>
+                    <td style="font-size:12px; border: 1px solid black;padding:3px" ><b>{{$organisasi}}</b></td>
+                  </tr>
+  
+                  <tr>
+                    <td rowspan="2" style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;width:5%;background-color:#b8cce4">5</td>
+                    <td colspan="3" style="background-color:#b8cce4;border: 1px solid black;padding:1px;font-size:12px"><b>CATATAN/ REKOMENDASI</b></td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" style="font-size:12px; border: 1px solid black;padding:3px;">-</td>
+                    
+                  </tr>
+            
         
         </tbody>
       </table>
