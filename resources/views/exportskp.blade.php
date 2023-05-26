@@ -483,7 +483,7 @@ html *
           <tr>
             <td style="background-color:#b8cce4;font-size:11px; border: 1px solid black;padding:1px;text-align:center;">(1)</td>
             <td style="background-color:#b8cce4;font-size:11px; border: 1px solid black;padding:1px;text-align:center;">(2)</td>
-            <td style="background-color:#b8cce4;font-size:11px; border: 1px solid black;padding:1px;text-align:center;">(3))</td>
+            <td style="background-color:#b8cce4;font-size:11px; border: 1px solid black;padding:1px;text-align:center;">(3)</td>
             <td style="background-color:#b8cce4;font-size:11px; border: 1px solid black;padding:1px;text-align:center;">(4)</td>
             <td style="background-color:#b8cce4;font-size:11px; border: 1px solid black;padding:1px;text-align:center;">(5)</td>
             <td style="background-color:#b8cce4;font-size:11px; border: 1px solid black;padding:1px;text-align:center;">(6)</td>
