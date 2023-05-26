@@ -450,7 +450,7 @@ html *
           <td colspan="8" style="background-color:#b8cce4;border: 1px solid black;font-size:11px;padding:3px"><b>CAPAIAN KINERJA ORGANISASI :<br> {{$organisasi}}</b></td>
         </tr>
         <tr>
-          <td colspan="8" style="background-color:#b8cce4;border-top: 1px solid black;border-left:1px solid black;border-right:1px solid black;font-size:11px;padding:3px"><b>POLA DISTRIBUSI</b>
+          <td colspan="8" style="background-color:#b8cce4;border-top: 1px solid black;border-bottom: 1px solid #b8cce4;border-left:1px solid black;border-right:1px solid black;font-size:11px;padding:3px"><b>POLA DISTRIBUSI</b>
           
          </td>
         </tr>
@@ -468,7 +468,7 @@ html *
             <tbody style="color:black">
 
           <tr>
-            <td colspan="8" style="background-color:#b8cce4;border: 1px solid black;font-size:11px;padding:1px"><b>HASIL KERJA</b></td>
+            <td colspan="9" style="background-color:#b8cce4;border: 1px solid black;font-size:11px;padding:1px"><b>HASIL KERJA</b></td>
           </tr>
           <tr>
             <td style="background-color:#b8cce4;font-size:11px; border: 1px solid black;padding:1px;text-align:center;"><b>NO</b></td>
@@ -478,7 +478,7 @@ html *
             <td style="background-color:#b8cce4;font-size:11px; border: 1px solid black;padding:1px;text-align:center;"><b>INDIKATOR KINERJA INDIVIDU</b></td>
             <td style="background-color:#b8cce4;font-size:11px; border: 1px solid black;padding:1px;text-align:center;"><b>TARGET</b></td>
             <td style="background-color:#b8cce4;font-size:11px; border: 1px solid black;padding:1px;text-align:center;"><b>REALISASI</b></td>
-            <td style="background-color:#b8cce4;font-size:11px; border: 1px solid black;padding:1px;text-align:center;"><b>UMPAN BALIK</b></td>
+            <td colspan="2" style="background-color:#b8cce4;font-size:11px; border: 1px solid black;padding:1px;text-align:center;"><b>UMPAN BALIK BERKELANJUTAN BERDASARKAN BUKTI DUKUNG</b></td>
           </tr>
           <tr>
             <td style="background-color:#b8cce4;font-size:11px; border: 1px solid black;padding:1px;text-align:center;">(1)</td>
@@ -487,12 +487,12 @@ html *
             <td style="background-color:#b8cce4;font-size:11px; border: 1px solid black;padding:1px;text-align:center;">(4)</td>
             <td style="background-color:#b8cce4;font-size:11px; border: 1px solid black;padding:1px;text-align:center;">(5)</td>
             <td style="background-color:#b8cce4;font-size:11px; border: 1px solid black;padding:1px;text-align:center;">(6)</td>
-            <td style="background-color:#b8cce4;font-size:11px; border: 1px solid black;padding:1px;text-align:center;"></td>
             <td style="background-color:#b8cce4;font-size:11px; border: 1px solid black;padding:1px;text-align:center;">(7)</td>
+            <td colspan="2" style="background-color:#b8cce4;font-size:11px; border: 1px solid black;padding:1px;text-align:center;">(8)</td>
 
           </tr>
           <tr>
-            <td colspan="8" style="background-color:#b8cce4;border: 1px solid black;font-size:11px;padding:1px"><b>A. HASIL KERJA UTAMA</b></td>
+            <td colspan="9" style="background-color:#b8cce4;border: 1px solid black;font-size:11px;padding:1px"><b>A. HASIL KERJA UTAMA</b></td>
           </tr>
 
           <tr>
@@ -506,8 +506,9 @@ html *
             <td style="font-size:11px; border: 1px solid black;padding:1px">{{$items->indikator}}</td> 
             <td style="font-size:11px; border: 1px solid black;padding:1px">{{$items->target}}</td> 
             <td style="font-size:11px; border: 1px solid black;padding:1px">{{$items->realisasi}}</td> 
-            <td style="font-size:11px; border: 1px solid black;padding:1px"><img style="margin-top:5px;width:25px;border-radius:50%"src="https://i.ibb.co/1GWnwCw/Screenshot-28.png" alt="">{{$items->umpan}}</td> 
-
+            <td style="width:15px;border-bottom:1px solid black;border-right: white"> <img style="width:30px;border-radius:50%"src="https://i.ibb.co/1GWnwCw/Screenshot-28.png" alt=""></td> 
+            <td style="font-size:11px; border: 1px solid black;padding:1px">{{$items->umpan}}</td> 
+           
             </tr>
 
             <tr>
@@ -515,7 +516,7 @@ html *
             <td style="font-size:11px; border: 1px solid black;padding:1px">0</td>
             <td style="font-size:11px; border: 1px solid black;padding:1px">0</td>
             <td style="font-size:11px; border: 1px solid black;padding:1px">0</td>
-            <td style="font-size:11px; border: 1px solid black;padding:1px"></td>
+            <td colspan="2" style="font-size:11px; border: 1px solid black;padding:1px"></td>
             </tr>
 
             <tr>
@@ -523,7 +524,7 @@ html *
             <td style="font-size:11px; border: 1px solid black;padding:1px">0</td>
             <td style="font-size:11px; border: 1px solid black;padding:1px">0</td>
             <td style="font-size:11px; border: 1px solid black;padding:1px">0</td>
-            <td style="font-size:11px; border: 1px solid black;padding:1px"></td>
+            <td colspan="2" style="font-size:11px; border: 1px solid black;padding:1px"></td>
             
             </tr>
            
@@ -531,7 +532,7 @@ html *
         </tr>
 
         <tr>
-          <td colspan="8" style="background-color:#b8cce4;border: 1px solid black;font-size:11px;padding:2px"><b>B. HASIL KERJA TAMBAHAN</b></td>
+          <td colspan="9" style="background-color:#b8cce4;border: 1px solid black;font-size:11px;padding:2px"><b>B. HASIL KERJA TAMBAHAN</b></td>
         </tr>
 
         <tr>
@@ -545,7 +546,7 @@ html *
           <td style="font-size:11px; border: 1px solid black;padding:1px">1</td> 
           <td style="font-size:11px; border: 1px solid black;padding:1px">1</td> 
           <td style="font-size:11px; border: 1px solid black;padding:1px"></td> 
-          <td style="font-size:11px; border: 1px solid black;padding:1px"></td> 
+          <td colspan="2" style="font-size:11px; border: 1px solid black;padding:1px"></td> 
 
           </tr>
 
@@ -554,7 +555,7 @@ html *
           <td style="font-size:11px; border: 1px solid black;padding:1px">2</td>
           <td style="font-size:11px; border: 1px solid black;padding:1px">2</td>
           <td style="font-size:11px; border: 1px solid black;padding:1px"></td> 
-          <td style="font-size:11px; border: 1px solid black;padding:1px"></td> 
+          <td colspan="2" style="font-size:11px; border: 1px solid black;padding:1px"></td> 
           </tr>
 
           <tr>
@@ -562,7 +563,7 @@ html *
           <td style="font-size:11px; border: 1px solid black;padding:1px">3</td>
           <td style="font-size:11px; border: 1px solid black;padding:1px">3</td>
           <td style="font-size:11px; border: 1px solid black;padding:1px"></td> 
-          <td style="font-size:11px; border: 1px solid black;padding:1px"></td> 
+          <td colspan="2" style="font-size:11px; border: 1px solid black;padding:1px"></td> 
           
           </tr>
          
@@ -580,7 +581,7 @@ html *
           <td style="font-size:11px; border: 1px solid black;padding:1px">4</td> 
           <td style="font-size:11px; border: 1px solid black;padding:1px">4</td> 
           <td style="font-size:11px; border: 1px solid black;padding:1px"></td> 
-          <td style="font-size:11px; border: 1px solid black;padding:1px"></td> 
+          <td colspan="2" style="font-size:11px; border: 1px solid black;padding:1px"></td> 
           
           </tr>
 
@@ -589,7 +590,7 @@ html *
           <td style="font-size:11px; border: 1px solid black;padding:1px">5</td>
           <td style="font-size:11px; border: 1px solid black;padding:1px">5</td>
           <td style="font-size:11px; border: 1px solid black;padding:1px"></td> 
-          <td style="font-size:11px; border: 1px solid black;padding:1px"></td> 
+          <td colspan="2" style="font-size:11px; border: 1px solid black;padding:1px"></td> 
           </tr>
 
           <tr>
@@ -597,7 +598,7 @@ html *
           <td style="font-size:11px; border: 1px solid black;padding:1px">6</td>
           <td style="font-size:11px; border: 1px solid black;padding:1px">6</td>
           <td style="font-size:11px; border: 1px solid black;padding:1px"></td> 
-          <td style="font-size:11px; border: 1px solid black;padding:1px"></td> 
+          <td colspan="2" style="font-size:11px; border: 1px solid black;padding:1px"></td> 
           
           </tr>
          
@@ -605,7 +606,7 @@ html *
       </tr>
           
       <tr>
-        <td colspan="8" style="background-color:#b8cce4;border: 1px solid black;font-size:11px;padding:1px"><b>RATING HASIL KERJA :
+        <td colspan="9" style="background-color:#b8cce4;border: 1px solid black;font-size:11px;padding:1px"><b>RATING HASIL KERJA :
                <br><b> {{$rating}}</b> 
         </td>
       </tr>
@@ -613,23 +614,23 @@ html *
     
       <tr>
         <td colspan="5"  style="background-color:#b8cce4;border: 1px solid black;font-size:11px;padding:1px"><b>PERILAKU KERJA </b></td>
-        <td colspan="3"  style="background-color:#b8cce4;border: 1px solid black;font-size:11px;padding:1px"><b>UMPAN BALIK BERKELANJUTAN BERDASARKAN BUKTI DUKUNG </b></td>
+        <td colspan="4"  style="background-color:#b8cce4;border: 1px solid black;font-size:11px;padding:1px"><b>UMPAN BALIK BERKELANJUTAN BERDASARKAN BUKTI DUKUNG </b></td>
       </tr>
       <tr>
         <td rowspan="3" style="font-size:11px; border: 1px solid black;padding:4px;text-align:center;">1</td>
-        <td colspan="7" style="font-size:11px; border: 1px solid black;padding:4px">Berorientasi Pelayanan</td>
+        <td colspan="8" style="font-size:11px; border: 1px solid black;padding:4px">Berorientasi Pelayanan</td>
       </tr>
       <tr>
         <td colspan="3" style="font-size:11px; border: 1px solid black;padding:4px">Ukuran Keberhasilan/Indikator Kinerja dan Target :</td>
         <td  style="font-size:11px; border: 1px solid black;padding:4px">Ekspetasi Khusus Pimpinan : </td>
-        <td  colspan="3" style="font-size:11px; border: 1px solid black;padding:4px">Umpan Balik : </td>
+        <td  colspan="4" style="font-size:11px; border: 1px solid black;padding:4px">Umpan Balik : </td>
       </tr>
       <tr>
         <td colspan="3" style="font-size:11px; border: 1px solid black;padding:4px">1. Memahami dan memenuhi kebutuhan masyarakat<br>
             2. Ramah, cekatan, solutif, dan dapat diandalkan<br>
             3. Melakukan perbaikan tiada henti</td>
         <td style="font-size:11px; border: 1px solid black;padding:4px">{{$ekspetasi1->ekspetasi}} </td>
-        <td  colspan="3"  style="font-size:11px; border: 1px solid black;padding:4px">{{$ekspetasi1->umpan}} </td>
+        <td  colspan="4"  style="font-size:11px; border: 1px solid black;padding:4px">{{$ekspetasi1->umpan}} </td>
       
       </tr>
 
