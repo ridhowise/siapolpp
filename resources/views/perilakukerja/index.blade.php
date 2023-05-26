@@ -213,10 +213,10 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                           @foreach($dataz as $key =>$items)
                           <tr>
 
-                              <td> <input value="{{$items->akhlak->akhlak}}" name="akhlak[]" class="form-control" disabled> </td>   
-                              <td> <input value="" name="ekspetasi[]" placeholder="Ekspetasi" class="form-control"> </td>                                                                                                     
-                              <td> <input value="" name="umpan[]" placeholder="umpan"  class="form-control"> </td>
-                          
+                              <td> <input value="{{$items->akhlak->akhlak}}" name="akhlak[]" class="form-control" disabled> </td> 
+                              <td><textarea style="height:60px" name="ekspetasi[]" id="" cols="30" rows="10"></textarea></td>  
+                              <td><textarea style="height:60px" name="umpan[]" id="" cols="30" rows="10"></textarea></td>  
+
                           
                           </tr>                                                   
                           @endforeach
