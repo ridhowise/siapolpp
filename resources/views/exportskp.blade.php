@@ -371,7 +371,7 @@ html *
 <br>
 
 <div class="float-left" style="text-align:center;font-size:11px;margin-left:20px"><br><br><b>PNS yang Dinilai,</b><br><br><br><br><br><b>{{$skp->user->name}}</b><br><b>{{$skp->user->nip}}</b></div>
-<div class="float-right" style="text-align:center;font-size:11px;margin-right:20px">Bitung, {{$date}} <br><br><b>Pejabat Penilai,</b><br><br><br><br><br><b>{{$atasans}}</b><br><b>{{$atasann->nip}}</b></div><br>
+<div class="float-right" style="text-align:center;font-size:11px;margin-right:20px">Bitung, 4 Januari 2023 <br><br><b>Pejabat Penilai,</b><br><br><br><br><br><b>{{$atasans}}</b><br><b>{{$atasann->nip}}</b></div><br>
 
 <div class="page-break"></div>
 
@@ -405,45 +405,45 @@ html *
         <td colspan="3" style="background-color:#b8cce4;text-align:center;border: 1px solid black;padding:3px"><b>PEJABAT PENILAI KINERJA</b></td>
       </tr>
       <tr>
-          <td style="font-size:11px; border: 1px solid black;padding:3px;text-align:center;">1</td>
-          <td style="font-size:11px; border: 1px solid black;padding:3px">Nama</td>
-          <td colspan="2" style="font-size:11px; border: 1px solid black;padding:3px" >{{$skp->user->name}}</td>
-          <td style="font-size:11px; border: 1px solid black;padding:3px;text-align:center;">1</td>
-          <td style="font-size:11px; border: 1px solid black;padding:3px">Nama</td>
-          <td colspan="2" style="font-size:11px; border: 1px solid black;padding:3px">{{$atasans}}</td>
+          <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;">1</td>
+          <td style="font-size:12px; border: 1px solid black;padding:3px">Nama</td>
+          <td colspan="2" style="font-size:12px; border: 1px solid black;padding:3px" >{{$skp->user->name}}</td>
+          <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;">1</td>
+          <td style="font-size:12px; border: 1px solid black;padding:3px">Nama</td>
+          <td colspan="2" style="font-size:12px; border: 1px solid black;padding:3px">{{$atasans}}</td>
       </tr>
       <tr>
-          <td style="font-size:11px; border: 1px solid black;padding:3px;text-align:center;">2</td>
-          <td style="font-size:11px; border: 1px solid black;padding:3px">NIP</td>
-          <td colspan="2" style="font-size:11px; border: 1px solid black;padding:3px" >{{$skp->user->nip}}</td>
-          <td style="font-size:11px; border: 1px solid black;padding:3px;text-align:center;">2</td>
-          <td style="font-size:11px; border: 1px solid black;padding:3px">NIP</td>
-          <td colspan="2" style="font-size:11px; border: 1px solid black;padding:3px">{{$atasann->nip}}</td>
-      </tr>
-      <tr>
-          <td style="font-size:11px; border: 1px solid black;padding:3px;text-align:center;">3</td>
-          <td style="font-size:11px; border: 1px solid black;padding:3px">Pangkat / Gol Ruang</td>
-          <td colspan="2" style="font-size:11px; border: 1px solid black;padding:3px" >{{$skp->user->golongan->name}}</td>
-          <td style="font-size:11px; border: 1px solid black;padding:3px;text-align:center;">3</td>
-          <td style="font-size:11px; border: 1px solid black;padding:3px">Pangkat / Gol Ruang</td>
-          <td colspan="2" style="font-size:11px; border: 1px solid black;padding:3px">{{$atasann->golongan->name}}</td>
-      </tr>
-      <tr>
-          <td style="font-size:11px; border: 1px solid black;padding:3px;text-align:center;">4</td>
-          <td style="font-size:11px; border: 1px solid black;padding:3px">Jabatan</td>
-          <td colspan="2" style="font-size:11px; border: 1px solid black;padding:3px" >{{$skp->user->level->name}}</td>
-          <td style="font-size:11px; border: 1px solid black;padding:3px;text-align:center;">4</td>
-          <td style="font-size:11px; border: 1px solid black;padding:3px">Jabatan</td>
-          <td colspan="2" style="font-size:11px; border: 1px solid black;padding:3px">{{$atasann->level->name}}</td>
-      </tr>
-      <tr>
-          <td style="font-size:11px; border: 1px solid black;padding:3px;text-align:center;">5</td>
-          <td style="font-size:11px; border: 1px solid black;padding:3px">Unit Kerja</td>
-          <td colspan="2" style="font-size:11px; border: 1px solid black;padding:3px" >Satuan Polisi Pamong Praja</td>
-          <td style="font-size:11px; border: 1px solid black;padding:3px;text-align:center;">5</td>
-          <td style="font-size:11px; border: 1px solid black;padding:3px">Unit Kerja</td>
-          <td colspan="2" style="font-size:11px; border: 1px solid black;padding:3px">Satuan Polisi Pamong Praja</td>
-      </tr>
+        <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;">2</td>
+        <td style="font-size:12px; border: 1px solid black;padding:3px">NIP</td>
+        <td colspan="2" style="font-size:12px; border: 1px solid black;padding:3px" >{{$skp->user->nip}}</td>
+        <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;">2</td>
+        <td style="font-size:12px; border: 1px solid black;padding:3px">NIP</td>
+        <td colspan="2" style="font-size:12px; border: 1px solid black;padding:3px">{{$atasann->nip}}</td>
+    </tr>
+    <tr>
+        <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;">3</td>
+        <td style="font-size:12px; border: 1px solid black;padding:3px">Pangkat / Gol Ruang</td>
+        <td colspan="2" style="font-size:12px; border: 1px solid black;padding:3px" >{{$skp->user->golongan->name}}</td>
+        <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;">3</td>
+        <td style="font-size:12px; border: 1px solid black;padding:3px">Pangkat / Gol Ruang</td>
+        <td colspan="2" style="font-size:12px; border: 1px solid black;padding:3px">{{$atasann->golongan->name}}</td>
+    </tr>
+    <tr>
+        <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;">4</td>
+        <td style="font-size:12px; border: 1px solid black;padding:3px">Jabatan</td>
+        <td colspan="2" style="font-size:12px; border: 1px solid black;padding:3px" >{{$skp->user->level->name}}</td>
+        <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;">4</td>
+        <td style="font-size:12px; border: 1px solid black;padding:3px">Jabatan</td>
+        <td colspan="2" style="font-size:12px; border: 1px solid black;padding:3px">{{$atasann->level->name}}</td>
+    </tr>
+    <tr>
+        <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;">5</td>
+        <td style="font-size:12px; border: 1px solid black;padding:3px">Unit Kerja</td>
+        <td colspan="2" style="font-size:12px; border: 1px solid black;padding:3px" >Satuan Polisi Pamong Praja</td>
+        <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;">5</td>
+        <td style="font-size:12px; border: 1px solid black;padding:3px">Unit Kerja</td>
+        <td colspan="2" style="font-size:12px; border: 1px solid black;padding:3px">Satuan Polisi Pamong Praja</td>
+    </tr>
      
     
         <tr>
@@ -513,17 +513,17 @@ html *
 
             <tr>
             <td style="font-size:11px; border: 1px solid black;padding:1px">Kualitas</td> 
-            <td style="font-size:11px; border: 1px solid black;padding:1px">0</td>
-            <td style="font-size:11px; border: 1px solid black;padding:1px">0</td>
-            <td style="font-size:11px; border: 1px solid black;padding:1px">0</td>
+            <td style="font-size:11px; border: 1px solid black;padding:1px"></td>
+            <td style="font-size:11px; border: 1px solid black;padding:1px"></td>
+            <td style="font-size:11px; border: 1px solid black;padding:1px"></td>
             <td colspan="2" style="font-size:11px; border: 1px solid black;padding:1px"></td>
             </tr>
 
             <tr>
             <td style="font-size:11px; border: 1px solid black;padding:1px">Waktu</td> 
-            <td style="font-size:11px; border: 1px solid black;padding:1px">0</td>
-            <td style="font-size:11px; border: 1px solid black;padding:1px">0</td>
-            <td style="font-size:11px; border: 1px solid black;padding:1px">0</td>
+            <td style="font-size:11px; border: 1px solid black;padding:1px"></td>
+            <td style="font-size:11px; border: 1px solid black;padding:1px"></td>
+            <td style="font-size:11px; border: 1px solid black;padding:1px"></td>
             <td colspan="2" style="font-size:11px; border: 1px solid black;padding:1px"></td>
             
             </tr>
@@ -617,24 +617,24 @@ html *
         <tbody style="color:black">
     
       <tr>
-        <td colspan="5"  style="background-color:#b8cce4;border: 1px solid black;font-size:11px;padding:1px"><b>PERILAKU KERJA </b></td>
-        <td colspan="4"  style="background-color:#b8cce4;border: 1px solid black;font-size:11px;padding:1px"><b>UMPAN BALIK BERKELANJUTAN BERDASARKAN BUKTI DUKUNG </b></td>
+        <td colspan="3"  style="background-color:#b8cce4;border: 1px solid black;font-size:11px;padding:1px"><b>PERILAKU KERJA </b></td>
+        <td   style="background-color:#b8cce4;border: 1px solid black;font-size:11px;padding:1px"><b>UMPAN BALIK BERKELANJUTAN BERDASARKAN BUKTI DUKUNG </b></td>
       </tr>
       <tr>
         <td rowspan="3" style="font-size:11px; border: 1px solid black;padding:4px;text-align:center;">1</td>
-        <td colspan="8" style="font-size:11px; border: 1px solid black;padding:4px">Berorientasi Pelayanan</td>
+        <td colspan="3" style="font-size:11px; border: 1px solid black;padding:4px">Berorientasi Pelayanan</td>
       </tr>
       <tr>
-        <td colspan="3" style="font-size:11px; border: 1px solid black;padding:4px">Ukuran Keberhasilan/Indikator Kinerja dan Target :</td>
+        <td  style="font-size:11px; border: 1px solid black;padding:4px">Ukuran Keberhasilan/Indikator Kinerja dan Target :</td>
         <td  style="font-size:11px; border: 1px solid black;padding:4px">Ekspetasi Khusus Pimpinan : </td>
-        <td  colspan="4" style="font-size:11px; border: 1px solid black;padding:4px">Umpan Balik : </td>
+        <td  style="font-size:11px; border: 1px solid black;padding:4px">Umpan Balik : </td>
       </tr>
       <tr>
-        <td colspan="3" style="font-size:11px; border: 1px solid black;padding:4px">1. Memahami dan memenuhi kebutuhan masyarakat<br>
+        <td style="font-size:11px; border: 1px solid black;padding:4px">1. Memahami dan memenuhi kebutuhan masyarakat<br>
             2. Ramah, cekatan, solutif, dan dapat diandalkan<br>
             3. Melakukan perbaikan tiada henti</td>
         <td style="font-size:11px; border: 1px solid black;padding:4px">{{$ekspetasi1->ekspetasi}} </td>
-        <td  colspan="4"  style="font-size:11px; border: 1px solid black;padding:4px">{{$ekspetasi1->umpan}} </td>
+        <td    style="font-size:11px; border: 1px solid black;padding:4px">{{$ekspetasi1->umpan}} </td>
       
       </tr>
 
@@ -642,72 +642,72 @@ html *
 
       <tr>
         <td rowspan="3" style="font-size:11px; border: 1px solid black;padding:4px;text-align:center;">2</td>
-        <td colspan="7" style="font-size:11px; border: 1px solid black;padding:4px">Akuntabel</td>
+        <td colspan="3" style="font-size:11px; border: 1px solid black;padding:4px">Akuntabel</td>
       </tr>
       <tr>
-        <td colspan="3" style="font-size:11px; border: 1px solid black;padding:4px">Ukuran Keberhasilan/Indikator Kinerja dan Target :</td>
+        <td  style="font-size:11px; border: 1px solid black;padding:4px">Ukuran Keberhasilan/Indikator Kinerja dan Target :</td>
         <td  style="font-size:11px; border: 1px solid black;padding:4px">Ekspetasi Khusus Pimpinan : </td>
-        <td  colspan="3" style="font-size:11px; border: 1px solid black;padding:4px">Umpan Balik : </td>
+        <td   style="font-size:11px; border: 1px solid black;padding:4px">Umpan Balik : </td>
       </tr>
       <tr>
-        <td colspan="3" style="font-size:11px; border: 1px solid black;padding:4px">1. Melaksanakan tugas dengan jujur, bertanggung jawab, cermat, disiplin, dan berintegritas tinggi
+        <td  style="font-size:11px; border: 1px solid black;padding:4px">1. Melaksanakan tugas dengan jujur, bertanggung jawab, cermat, disiplin, dan berintegritas tinggi
           <br>2. Menggunakan kekayaan dan BMN secara bertanggung jawab, efektif, dan efisien
           <br>3. Tidak menyalahgunakan kewenangan jabatan</td>
         <td style="font-size:11px; border: 1px solid black;padding:4px">{{$ekspetasi2->ekspetasi}} </td>
-        <td  colspan="3"  style="font-size:11px; border: 1px solid black;padding:4px">{{$ekspetasi2->umpan}} </td>
+        <td    style="font-size:11px; border: 1px solid black;padding:4px">{{$ekspetasi2->umpan}} </td>
       
       </tr>
       <tr>
         <td rowspan="3" style="font-size:11px; border: 1px solid black;padding:4px;text-align:center;">3</td>
-        <td colspan="7" style="font-size:11px; border: 1px solid black;padding:4px">Kompeten</td>
+        <td colspan="3" style="font-size:11px; border: 1px solid black;padding:4px">Kompeten</td>
       </tr>
       <tr>
-        <td colspan="3" style="font-size:11px; border: 1px solid black;padding:4px">Ukuran Keberhasilan/Indikator Kinerja dan Target :</td>
+        <td  style="font-size:11px; border: 1px solid black;padding:4px">Ukuran Keberhasilan/Indikator Kinerja dan Target :</td>
         <td  style="font-size:11px; border: 1px solid black;padding:4px">Ekspetasi Khusus Pimpinan : </td>
-        <td  colspan="3" style="font-size:11px; border: 1px solid black;padding:4px">Umpan Balik : </td>
+        <td   style="font-size:11px; border: 1px solid black;padding:4px">Umpan Balik : </td>
       </tr>
       <tr>
-        <td colspan="3" style="font-size:11px; border: 1px solid black;padding:4px">1. Meningkatkan kompetensi diri untuk menjawab tantangan yang selalu berubah
+        <td  style="font-size:11px; border: 1px solid black;padding:4px">1. Meningkatkan kompetensi diri untuk menjawab tantangan yang selalu berubah
           <br>2. Membantu orang lain belajar
           <br>3. Melaksanakan tugas dengan kualitas terbaik</td>
         <td style="font-size:11px; border: 1px solid black;padding:4px">{{$ekspetasi3->ekspetasi}} </td>
-        <td  colspan="3"  style="font-size:11px; border: 1px solid black;padding:4px">{{$ekspetasi3->umpan}} </td>
+        <td    style="font-size:11px; border: 1px solid black;padding:4px">{{$ekspetasi3->umpan}} </td>
       
       </tr>
       
       <tr>
         <td rowspan="3" style="font-size:11px; border: 1px solid black;padding:4px;text-align:center;">4</td>
-        <td colspan="7" style="font-size:11px; border: 1px solid black;padding:4px">Harmonis</td>
+        <td colspan="3" style="font-size:11px; border: 1px solid black;padding:4px">Harmonis</td>
       </tr>
       <tr>
-        <td colspan="3" style="font-size:11px; border: 1px solid black;padding:4px">Ukuran Keberhasilan/Indikator Kinerja dan Target :</td>
+        <td  style="font-size:11px; border: 1px solid black;padding:4px">Ukuran Keberhasilan/Indikator Kinerja dan Target :</td>
         <td  style="font-size:11px; border: 1px solid black;padding:4px">Ekspetasi Khusus Pimpinan : </td>
-        <td  colspan="3" style="font-size:11px; border: 1px solid black;padding:4px"> Umpan Balik :</td>
+        <td   style="font-size:11px; border: 1px solid black;padding:4px"> Umpan Balik :</td>
       </tr>
       <tr>
-        <td colspan="3" style="font-size:11px; border: 1px solid black;padding:4px">1. Menghargai setiap orang apapun latar belakangnya
+        <td  style="font-size:11px; border: 1px solid black;padding:4px">1. Menghargai setiap orang apapun latar belakangnya
           <br>2. Suka menolong orang lain
           <br>3. Membangun lingkungan kerja yang kondusif</td>
         <td style="font-size:11px; border: 1px solid black;padding:4px">{{$ekspetasi4->ekspetasi}} </td>
-        <td  colspan="3"  style="font-size:11px; border: 1px solid black;padding:4px">{{$ekspetasi4->umpan}} </td>
+        <td    style="font-size:11px; border: 1px solid black;padding:4px">{{$ekspetasi4->umpan}} </td>
       
       </tr>
       
       <tr>
         <td rowspan="3" style="font-size:11px; border: 1px solid black;padding:4px;text-align:center;">5</td>
-        <td colspan="7" style="font-size:11px; border: 1px solid black;padding:4px">Loyal</td>
+        <td colspan="3" style="font-size:11px; border: 1px solid black;padding:4px">Loyal</td>
       </tr>
       <tr>
-        <td colspan="3" style="font-size:11px; border: 1px solid black;padding:4px">Ukuran Keberhasilan/Indikator Kinerja dan Target :</td>
+        <td  style="font-size:11px; border: 1px solid black;padding:4px">Ukuran Keberhasilan/Indikator Kinerja dan Target :</td>
         <td  style="font-size:11px; border: 1px solid black;padding:4px">Ekspetasi Khusus Pimpinan : </td>
-        <td  colspan="3" style="font-size:11px; border: 1px solid black;padding:4px"> Umpan Balik :</td>
+        <td   style="font-size:11px; border: 1px solid black;padding:4px"> Umpan Balik :</td>
       </tr>
       <tr>
-        <td colspan="3" style="font-size:11px; border: 1px solid black;padding:4px">1. Memegang teguh ideologi pancasila, UUD 1945, setia terhadap NKRI serta pemerintahan yang sah
+        <td  style="font-size:11px; border: 1px solid black;padding:4px">1. Memegang teguh ideologi pancasila, UUD 1945, setia terhadap NKRI serta pemerintahan yang sah
           <br>2. Menjaga nama baik sesama ASN, Pimpinan, Instansi, dan Negara
           <br>3. Menjaga rahasia jabatan dan Negara</td>
         <td style="font-size:11px; border: 1px solid black;padding:4px">{{$ekspetasi5->ekspetasi}} </td>
-        <td  colspan="3"  style="font-size:11px; border: 1px solid black;padding:4px">{{$ekspetasi5->umpan}} </td>
+        <td   style="font-size:11px; border: 1px solid black;padding:4px">{{$ekspetasi5->umpan}} </td>
       
       </tr>
       
@@ -766,7 +766,7 @@ html *
     </tbody>
   </table>
   <br>
-      <div class="float-right" style="text-align:center;font-size:11px;margin-right:20px">Bitung, {{$date}} <br><br><b>Pejabat Penilai,</b><br><br><br><br><br><b>{{$atasans}}</b><br><b>{{$atasann->nip}}</b></div><br>
+      <div class="float-right" style="text-align:center;font-size:11px;margin-right:20px">Bitung, 4 januari 2023 <br><br><b>Pejabat Penilai,</b><br><br><br><br><br><b>{{$atasans}}</b><br><b>{{$atasann->nip}}</b></div><br>
 
       
 

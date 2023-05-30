@@ -58,35 +58,35 @@ html *
         @endphp
         
         <tr>
-          <td colspan="2" style="background-color:#b8cce4;border: 1px solid black;padding:1px;font-size:12px"><b>DUKUNGAN SUMBER DAYA</b></td>
+          <td colspan="2" style="background-color:#b8cce4;border: 1px solid black;padding:1px;font-size:13px"><b>DUKUNGAN SUMBER DAYA</b></td>
         </tr>
         
           @foreach($dukungan as $key => $dukungans)
           <tr>
-            <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;width:10%">{{$no++}}</td>
-            <td style="font-size:12px; border: 1px solid black;padding:3px" >{{$dukungans->dukungan}}</td>
+            <td style="font-size:13px; border: 1px solid black;padding:3px;text-align:center;width:10%">{{$no++}}</td>
+            <td style="font-size:13px; border: 1px solid black;padding:3px" >{{$dukungans->dukungan}}</td>
           </tr>
           @endforeach
 
           <tr>
-            <td colspan="2" style="background-color:#b8cce4;border: 1px solid black;padding:1px;font-size:12px"><b>SKEMA PERTANGGUNG JAWABAN</b></td>
+            <td colspan="2" style="background-color:#b8cce4;border: 1px solid black;padding:1px;font-size:13px"><b>SKEMA PERTANGGUNG JAWABAN</b></td>
           </tr>
 
           @foreach($skema as $key => $skemas)
           <tr>
-            <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;">{{$noo++}}</td>
-            <td style="font-size:12px; border: 1px solid black;padding:3px" >{{$skemas->skema}}</td>
+            <td style="font-size:13px; border: 1px solid black;padding:3px;text-align:center;">{{$noo++}}</td>
+            <td style="font-size:13px; border: 1px solid black;padding:3px" >{{$skemas->skema}}</td>
           </tr>
           @endforeach
 
           <tr>
-            <td colspan="2" style="background-color:#b8cce4;border: 1px solid black;padding:1px;font-size:12px"><b>KONSEKUENSI</b></td>
+            <td colspan="2" style="background-color:#b8cce4;border: 1px solid black;padding:1px;font-size:13px"><b>KONSEKUENSI</b></td>
           </tr>
 
           @foreach($konsekuensi as $key => $konsekuensis)
           <tr>
-            <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;">{{$nooo++}}</td>
-            <td style="font-size:12px; border: 1px solid black;padding:3px" >{{$konsekuensis->konsekuensi}}</td>
+            <td style="font-size:13px; border: 1px solid black;padding:3px;text-align:center;">{{$nooo++}}</td>
+            <td style="font-size:13px; border: 1px solid black;padding:3px" >{{$konsekuensis->konsekuensi}}</td>
           </tr>
           @endforeach
         
@@ -95,7 +95,7 @@ html *
       </table>
 
 <div class="float-left" style="text-align:center;font-size:12px;margin-left:10px"><br><br><b>PNS yang Dinilai,</b><br><br><br><br><br><b>{{$skp->user->name}}</b><br><b>{{$skp->user->nip}}</b></div>
-<div class="float-right" style="text-align:center;font-size:12px;margin-right:10px">Bitung, {{$date}} <br><br><b>Pejabat Penilai,</b><br><br><br><br><br><b>{{$atasans}}</b><br><b>{{$atasann->nip}}</b></div><br>
+<div class="float-right" style="text-align:center;font-size:12px;margin-right:10px">Bitung, 4 Januari 2023 <br><br><b>Pejabat Penilai,</b><br><br><br><br><br><b>{{$atasans}}</b><br><b>{{$atasann->nip}}</b></div><br>
 
 <div class="page-break"></div>
   <div style="text-align:center;margin-top:10pxpx">
@@ -250,12 +250,12 @@ html *
                   <tr>
                     <td style="font-size:12px; border: 1px solid black;padding:3px;">CAPAIAN KINERJA ORGANISASI</td>
                     <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;width:2%">:</td>
-                    <td style="font-size:12px; border: 1px solid black;padding:3px" ><b>{{$pegawai}}</b></td>
+                    <td style="font-size:12px; border: 1px solid black;padding:3px" ><b>{{$organisasi}}</b></td>
                   </tr>
                   <tr>
                     <td style="font-size:12px; border: 1px solid black;padding:3px;">CAPAIAN KINERJA PEGAWAI</td>
                     <td style="font-size:12px; border: 1px solid black;padding:3px;text-align:center;width:2%">:</td>
-                    <td style="font-size:12px; border: 1px solid black;padding:3px" ><b>{{$organisasi}}</b></td>
+                    <td style="font-size:12px; border: 1px solid black;padding:3px" ><b>{{$pegawai}}</b></td>
                   </tr>
   
                   <tr>
@@ -272,7 +272,7 @@ html *
       </table>
 
 <div class="float-left" style="text-align:center;font-size:12px;margin-left:10px">Bitung, 31 Desember 2022 <br><br><b>PNS yang Dinilai,</b><br><br><br><br><br><b>{{$skp->user->name}}</b><br><b>{{$skp->user->nip}}</b></div>
-<div class="float-right" style="text-align:center;font-size:12px;margin-right:10px">Bitung, {{$date}}<br> <br><b>Pejabat Penilai,</b><br><br><br><br><br><b>{{$atasans}}</b><br><b>{{$atasann->nip}}</b></div><br>
+<div class="float-right" style="text-align:center;font-size:12px;margin-right:10px">Bitung, 4 Januari 2023<br> <br><b>Pejabat Penilai,</b><br><br><br><br><br><b>{{$atasans}}</b><br><b>{{$atasann->nip}}</b></div><br>
 
 
 </body>
