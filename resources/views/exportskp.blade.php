@@ -371,7 +371,7 @@ html *
 <br>
 
 <div class="float-left" style="text-align:center;font-size:11px;margin-left:20px"><br><br><b>PNS yang Dinilai,</b><br><br><br><br><br><b>{{$skp->user->name}}</b><br><b>{{$skp->user->nip}}</b></div>
-<div class="float-right" style="text-align:center;font-size:11px;margin-right:20px">Bitung, 4 Januari 2023 <br><br><b>Pejabat Penilai,</b><br><br><br><br><br><b>{{$atasans}}</b><br><b>{{$atasann->nip}}</b></div><br>
+<div class="float-right" style="text-align:center;font-size:11px;margin-right:20px">Bitung, 4 Januari 2022 <br><br><b>Pejabat Penilai,</b><br><br><br><br><br><b>{{$atasans}}</b><br><b>{{$atasann->nip}}</b></div><br>
 
 <div class="page-break"></div>
 
@@ -766,7 +766,7 @@ html *
     </tbody>
   </table>
   <br>
-      <div class="float-right" style="text-align:center;font-size:11px;margin-right:20px">Bitung, 4 januari 2023 <br><br><b>Pejabat Penilai,</b><br><br><br><br><br><b>{{$atasans}}</b><br><b>{{$atasann->nip}}</b></div><br>
+      <div class="float-right" style="text-align:center;font-size:11px;margin-right:20px">Bitung, 31 Desember 2022 <br><br><b>Pejabat Penilai,</b><br><br><br><br><br><b>{{$atasans}}</b><br><b>{{$atasann->nip}}</b></div><br>
 
       
 

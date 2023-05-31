@@ -46,7 +46,7 @@
   </tr>
   </table>
   <br>
-  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" style="font-size:12px" >
+  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" style="font-size:11px" >
 
     <thead style="color:black">
         <tr>
