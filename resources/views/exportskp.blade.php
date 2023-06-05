@@ -497,7 +497,7 @@ html *
 
           <tr>
             
-            <td rowspan="{{$count}}" style="font-size:11px; border: 1px solid black;padding:1px;text-align:center;">1</td>
+            <td rowspan="{{$count}}" style="width:3%;font-size:11px; border: 1px solid black;padding:1px;text-align:center;">1</td>
             <td rowspan="{{$count}}"style="font-size:11px; border: 1px solid black;padding:1px" >{{$datar->intervensi}}</td> 
             <td rowspan="{{$count}}" style="font-size:11px; border: 1px solid black;padding:1px">{{$datar->rencana}}</td> 
             @foreach($datai as $key => $items)
@@ -506,7 +506,7 @@ html *
             <td style="font-size:11px; border: 1px solid black;padding:1px">{{$items->indikator}}</td> 
             <td style="font-size:11px; border: 1px solid black;padding:1px">{{$items->target}}</td> 
             <td style="font-size:11px; border: 1px solid black;padding:1px">{{$items->realisasi}}</td> 
-            <td style="width:15px;border-bottom:1px solid black;border-right: white"> <img style="width:30px;border-radius:50%"src="https://i.ibb.co/1GWnwCw/Screenshot-28.png" alt=""></td> 
+            <td style="width:5%;border-bottom:1px solid black;border-right: white"> <img style="width:30px;border-radius:50%"src="https://i.ibb.co/1GWnwCw/Screenshot-28.png" alt=""></td> 
             <td style="font-size:11px; border: 1px solid black;padding:1px">{{$items->umpan}}</td> 
            
             </tr>

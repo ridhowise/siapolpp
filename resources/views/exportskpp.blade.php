@@ -274,6 +274,7 @@ html *
 <div class="float-left" style="text-align:center;font-size:12px;margin-left:10px">Bitung, 31 Desember 2022 <br><br><b>PNS yang Dinilai,</b><br><br><br><br><br><b>{{$skp->user->name}}</b><br><b>{{$skp->user->nip}}</b></div>
 <div class="float-right" style="text-align:center;font-size:12px;margin-right:10px">Bitung, 4 Januari 2023<br> <br><b>Pejabat Penilai,</b><br><br><br><br><br><b>{{$atasans}}</b><br><b>{{$atasann->nip}}</b></div><br>
 
+<br><br><br><br><br><br><br><br><br><br><div class="" style="margin:auto;text-align:center;font-size:12px;margin-right:10px"><b>Atasan Pejabat Penilai,</b><br><br><br><br><br><b>{{$superatasans}}</b><br><b>{{$superatasann->nip}}</b></div><br>
 
 </body>
 
