@@ -227,7 +227,6 @@
             </div>
         </div>
 
-
         <script type="text/javascript">
             $(document).ready(function() {
                 var postURL = "<?php echo url('addmore'); ?>";
@@ -237,8 +236,12 @@
                 $('#add').click(function() {
                     i++;
                     $('#dynamic_field').append('<tr id="row' + i +
-                        '" class="dynamic-added"><td><select name="user[]" id="user" class="form-control select" required><option value="0">-- Pilih Nama --</option>@foreach ($users as $user)<option value="{{ $user->id }}"> {{ $user->name }} </option>@endforeach</select></td><td><button type="button" name="remove" id="' + i + '" class="btn btn-danger btn_remove">X</button></td></tr>');
-                });
+                        '" class="dynamic-added"><td><select name="user[]" id="user" class="form-control select" required><option value="0">-- Pilih Nama --</option>@foreach ($users as $user)<option value="{{ $user->id }}"> {{ $user->name }} </option>@endforeach</select></td></tr>');
+                       
+                    });
+
+                
+
 
 
                 $(document).on('click', '.btn_remove', function() {
@@ -261,13 +264,16 @@
 
         function showEdit(id) {
             $.ajax({
-                url: "{{ url('usertahun') }}/" + id + "/edit",
+                url: "{{ url('rekapan') }}/" + id + "/edit",
                 success: function(res) {
                     $("#form-edit [name='id']").val(id);
-                    $("#form-edit [name='file']").val(res.data.file);
+                    $("#form-edit [name='types']").val(res.data.types);
+                    $("#form-edit [name='name']").val(res.data.name);
+                    $("#form-edit [name='class_id']").val(res.data.class_id);
+                    $("#form-edit [name='soal']").val(res.data.soal);
 
 
-                    $('#form-edit').attr('action', "./usertahun/" + id);
+                    $('#form-edit').attr('action', "./rekapan/" + id);
                     $("#edit").modal('show');
                 }
             })

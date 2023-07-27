@@ -25,7 +25,7 @@
 
 </style>
 
-<body style="font-size:11px">
+<body style="font-size:12px">
   <h6 style="text-align:center">REKAPITULASI TAMBAHAN PENGHASILAN SETIAP BULAN</h6>
   <table>
   <tr>
@@ -46,7 +46,7 @@
   </tr>
   </table>
   <br>
-  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" style="font-size:11px" >
+  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" style="font-size:12px" >
 
     <thead style="color:black">
         <tr>
@@ -114,7 +114,7 @@
 <br>
 <br>
 <div class="float-left" style="text-align:center"><br><br><b>Kepala SATPOL.PP Kota Bitung</b><br><br><br><br><br><b>Steven V.Suluh,SSTP,M.Si</b><br><b>Pembina Utama Muda</b></div>
-<div class="float-right" style="text-align:center">Bitung,....................... <br><b>BENDAHARA,</b><br><br><br><br><br><b>Oktafianus S. J. Sandeng</b><br><b>NIP.197710132006041007</b></div><br>
+<div class="float-right" style="text-align:center">Bitung,....................... <br><b>BENDAHARA,</b><br><br><br><br><br><b>Rawis Mauren Tifani,A.Md.TE</b><br><b>NIP.199708302022031015</b></div><br>
 </body>
 
 </html>
