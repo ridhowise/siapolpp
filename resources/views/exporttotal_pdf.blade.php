@@ -114,7 +114,7 @@
 <br>
 <br>
 <div class="float-left" style="text-align:center"><br><br><b>Kepala SATPOL.PP Kota Bitung</b><br><br><br><br><br><b>Steven V.Suluh,SSTP,M.Si</b><br><b>Pembina Utama Muda</b></div>
-<div class="float-right" style="text-align:center">Bitung,....................... <br><b>BENDAHARA,</b><br><br><br><br><br><b>Rawis Mauren Tifani, A.Md.T</b><br><b>NIP.199708302022031015</b></div><br>
+<div class="float-right" style="text-align:center">Bitung,....................... <br><b>BENDAHARA,</b><br><br><br><br><br><b>Rawis Mauren Tifani, A.Md.T</b><br><b>NIP.199708302022032015</b></div><br>
 </body>
 
 </html>
